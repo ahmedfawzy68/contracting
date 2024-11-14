@@ -1,0 +1,43 @@
+h2 {
+  font-size: 67px;
+}
+p {
+  font-size: 21px;
+}
+button {
+  background-color: #fff;
+  color: #000;
+  border-radius: 8px;
+  padding: 16px 40px;
+  border: none;
+  font-size: 22px;
+}
+.carousel-content {
+  min-height:100vh;
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+::ng-deep .hero-section-carousel .p-ripple {
+  position: absolute;
+  color: white;
+  z-index: 10;
+  transition: opacity 300ms ease-in-out;
+  background-color: transparent;
+  &:hover{
+    background-color: unset;
+    opacity: 0.6;
+  }
+}
+
+::ng-deep .hero-section-carousel .p-carousel-prev {
+  left: 10px;
+}
+
+::ng-deep .hero-section-carousel .p-carousel-next {
+  right: 10px;
+}
+

@@ -1,0 +1,44 @@
+section {
+  background-color: #0000000f;
+  padding-block: 50px;
+  .services-box {
+    clip-path: polygon(20px 0, 100% 0, 100% 100%, 0 100%, 0 20px);
+    background-color: #fff;
+    padding: 50px 20px;
+    min-height: 285px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+    img {
+      transition: all 300ms;
+    }
+    &:hover {
+      background: center center/cover no-repeat;
+      h5 {
+        color: #fff;
+        transform: translateY(-30px);
+      }
+      img {
+        transform: translateY(-150%);
+      }
+      span {
+        transform: translateY(-30px);
+        color: #fff;
+      }
+    }
+    h5 {
+      transition: all 300ms;
+      font-size: 22px;
+      color: var(--primary-color);
+    }
+    span {
+      font-size: 14px;
+      transform: translateY(350%);
+      display: block;
+      transition: all 300ms;
+    }
+  }
+}
+::ng-deep .service-section-carousel .p-ripple {
+  color: var(--secondary-color);
+}

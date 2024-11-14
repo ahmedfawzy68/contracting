@@ -1,0 +1,11 @@
+{
+  "dir": "ltr",
+
+  "navbar": {
+    "home": "Home",
+    "about-us": "About Us",
+    "portfolio": "Portfolio",
+    "services": "Services",
+    "contact-us": "Contact US"
+  }
+}

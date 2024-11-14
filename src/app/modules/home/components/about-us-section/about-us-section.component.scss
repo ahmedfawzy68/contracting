@@ -1,0 +1,9 @@
+.about-us-container {
+  background-color: white;
+  clip-path: polygon(50px 0, 100% 0, 100% 100%, 0 100%, 0 50px);
+  position: relative;
+  top: -80px;
+  p {
+    font-size: 18px;
+  }
+}

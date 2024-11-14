@@ -1,0 +1,43 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary py-3">
+    <div class="container">
+        <a class="navbar-brand"><img src="assets/imgs/logo.jpg" width="240" alt="logo"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvas"
+            aria-controls="navbarOffcanvas" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <div [ngClass]="(('dir' | translate) == 'rtl') ? 'offcanvas-end' : 'offcanvas-start'" class="offcanvas"
+            tabindex="-1" id="navbarOffcanvas" aria-labelledby="navbarOffcanvasLabel">
+            <div class="offcanvas-header justify-content-between">
+                <div>
+                    <h5 class="offcanvas-title" id="navbarOffcanvasLabel"><img src="assets/imgs/logo.jpg" width="240"
+                            alt="logo"></h5>
+                </div>
+                <div>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav m-auto mb-2 mb-lg-0 gap-3 p-0">
+                    <li *ngFor="let list of lists" class="nav-item">
+                        <a class="nav-link" routerLinkActive="active" [routerLink]="list.link">{{list.name |
+                            translate}}</a>
+                    </li>
+                    <li (click)="changeLanguage()" class="nav-item">
+                        <a class="nav-link d-flex gap-2 align-items-center">
+                            <img [src]="('dir' | translate) === 'rtl' ? 'assets/imgs/english.png' : 'assets/imgs/arabic.png'"
+                                alt="language">
+                            <span>
+                                {{ ('dir' | translate) === 'rtl' ? 'English' : 'Arabic' }}
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+                <div class="d-flex gap-4 align-items-center mt-lg-0 mt-5">
+                    <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>

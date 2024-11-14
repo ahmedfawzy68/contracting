@@ -1,0 +1,33 @@
+nav{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  .nav-item {
+    cursor: pointer;
+    .active {
+      color: var(--forth-color) !important;
+    }
+    font-weight: 600;
+    &:focus-visible {
+      outline: none;
+    }
+    a:focus-visible {
+      box-shadow: none;
+    }
+  }
+  i {
+    font-size: 20px;
+    color: var(--primary-color);
+  }
+  button {
+      border: none;
+      i{
+          font-size: 30px;
+      }
+    &:focus {
+      box-shadow: none;
+    }
+  }
+}

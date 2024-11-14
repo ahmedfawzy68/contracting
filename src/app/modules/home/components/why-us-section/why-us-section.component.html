@@ -1,0 +1,31 @@
+<section class="mb-4">
+    <div class="container text-center">
+        <header>
+            <div class="slug">
+                {{'home.company-name' | translate}}
+            </div>
+            <div class="slug-title">
+                {{"home.why-us" | translate}}
+            </div>
+        </header>
+        <div class="row align-items-center mt-5">
+            <div class="col-lg-4 mb-4">
+                <div class="why-us-box mb-4" *ngFor="let item of whyUsData.slice(0,2)">
+                    <i [class]="item.icon"></i>
+                    <h2 class="my-4">{{item.title}}</h2>
+                    <p>{{item.description}}</p>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <img src="assets/imgs/logo.png" width="100%" alt="logo">
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="why-us-box mb-4" *ngFor="let item of whyUsData.slice(2,4)">
+                    <i [class]="item.icon"></i>
+                    <h2 class="my-4">{{item.title}}</h2>
+                    <p>{{item.description}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
