@@ -5,11 +5,11 @@
   --forth-color: #a80760;
 }
 
-[dir="rtl"] {
-  font-family: "Cairo", sans-serif;
+[dir="rtl"] *:not(i){
+  font-family: "Cairo", sans-serif !important;
 }
 
-[dir="ltr"] {
+[dir="ltr"] *{
   font-family: "Barlow Condensed", sans-serif;
 }
 
