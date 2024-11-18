@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { HomeRoutingModule } from './home-routing.module';
@@ -15,7 +15,7 @@ import { GoalsSectionComponent } from './components/goals-section/goals-section.
 import { OurProjectsSectionComponent } from './components/our-projects-section/our-projects-section.component';
 import { TestmonialSectionComponent } from './components/testmonial-section/testmonial-section.component';
 import { RequestConsultationSectionComponent } from './components/request-consultation-section/request-consultation-section.component';
-
+import { SwiperComponent } from './components/swiper/swiper.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +28,8 @@ import { RequestConsultationSectionComponent } from './components/request-consul
     GoalsSectionComponent,
     OurProjectsSectionComponent,
     TestmonialSectionComponent,
-    RequestConsultationSectionComponent
+    RequestConsultationSectionComponent,
+    SwiperComponent
   ],
   imports: [
     CommonModule,
@@ -36,6 +37,7 @@ import { RequestConsultationSectionComponent } from './components/request-consul
     CarouselModule,
     TranslateModule,
     SharedModule
-  ]
+  ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class HomeModule { }
