@@ -1,0 +1,83 @@
+footer {
+  background-image: url(../../../../assets/imgs/slide1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+  clip-path: ellipse(100% 95% at 50% 100%);
+  padding-top: 150px;
+
+  h4 {
+    font-size: 25px;
+    font-weight: 600;
+  }
+
+  p {
+    font-size: 18px;
+  }
+
+  ul {
+    list-style: none;
+    li {
+      position: relative;
+      margin-bottom: 15px;
+      font-size: 17px;
+
+      [dir="rtl"] & {
+        padding-right: 30px;
+        padding-left: 0;
+      }
+
+      [dir="ltr"] & {
+        padding-left: 30px;
+        padding-right: 0;
+      }
+
+      &:before {
+        font-family: "Font Awesome 6 Free";
+        content: "\f00c";
+        font-weight: 900;
+        position: absolute;
+        color: var(--secondary-color);
+
+        [dir="rtl"] & {
+          right: 0;
+          left: auto;
+        }
+
+        [dir="ltr"] & {
+          left: 0;
+          right: auto;
+        }
+      }
+    }
+    .whatsapp {
+      &:before {
+        content: "\f879";
+      }
+    }
+    .email {
+      &:before {
+        content: "\f0e0";
+      }
+    }
+  }
+  .copy-rights{
+    background-color: var(--primary-color);
+    padding-block: 30px;
+    p{
+        font-size: 14px;
+    }
+    i{
+        color: white;
+        font-size: 18px;
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  footer {
+    clip-path: unset;
+    padding-top: 100px;
+  }
+}

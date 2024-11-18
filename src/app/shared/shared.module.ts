@@ -4,13 +4,15 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { TranslateModule } from '@ngx-translate/core';
 import { RouterModule } from '@angular/router';
 import { CustomBtnComponent } from './components/custom-btn/custom-btn.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 
 @NgModule({
   declarations: [
     NavbarComponent,
-    CustomBtnComponent
+    CustomBtnComponent,
+    FooterComponent
   ],
   imports: [
     CommonModule,
@@ -19,7 +21,8 @@ import { CustomBtnComponent } from './components/custom-btn/custom-btn.component
   ],
   exports: [
     NavbarComponent,
-    CustomBtnComponent
+    CustomBtnComponent,
+    FooterComponent
   ]
 })
 export class SharedModule { }
