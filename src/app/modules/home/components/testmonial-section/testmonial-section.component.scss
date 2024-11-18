@@ -1,0 +1,80 @@
+.testmonial-container {
+  clip-path: polygon(
+    100px 0,
+    100% 0,
+    100% calc(100% - 100px),
+    calc(100% - 100px) 100%,
+    0 100%,
+    0 100px
+  );
+  background-image: url(https://nawahel.co/wp-content/uploads/2019/06/01-1.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 500px;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #29175d;
+    opacity: 0.7;
+    z-index: -1;
+  }
+  .content {
+    color: white;
+    p {
+      font-size: 30px;
+    }
+    h5 {
+      font-size: 20px;
+    }
+    h6 {
+      font-size: 16px;
+    }
+    i {
+      font-size: 55px;
+    }
+  }
+}
+::ng-deep .testmonial-section-carousel .p-ripple {
+  position: absolute;
+  color: white;
+  background-color: transparent;
+  &:hover {
+    background-color: unset;
+    opacity: 0.6;
+  }
+  top: 70%;
+}
+
+::ng-deep .testmonial-section-carousel .p-carousel-prev {
+  left: 10%;
+}
+
+::ng-deep .testmonial-section-carousel .p-carousel-next {
+  right: 90%;
+}
+
+@media screen and (max-width: 1400px) {
+  ::ng-deep .testmonial-section-carousel .p-ripple {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .testmonial-container .content {
+    p {
+      font-size: 14px;
+    }
+    h5 {
+      font-size: 12px;
+    }
+    h6 {
+      font-size: 10px;
+    }
+  }
+}

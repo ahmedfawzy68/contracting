@@ -13,6 +13,7 @@ import { BookConsultationComponent } from './components/book-consultation/book-c
 import { ServicesSectionComponent } from './components/services-section/services-section.component';
 import { GoalsSectionComponent } from './components/goals-section/goals-section.component';
 import { OurProjectsSectionComponent } from './components/our-projects-section/our-projects-section.component';
+import { TestmonialSectionComponent } from './components/testmonial-section/testmonial-section.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { OurProjectsSectionComponent } from './components/our-projects-section/o
     BookConsultationComponent,
     ServicesSectionComponent,
     GoalsSectionComponent,
-    OurProjectsSectionComponent
+    OurProjectsSectionComponent,
+    TestmonialSectionComponent
   ],
   imports: [
     CommonModule,

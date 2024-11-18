@@ -1,0 +1,22 @@
+<section class="container my-5">
+    <div class="testmonial-container d-flex justify-content-center align-items-center py-5">
+        <p-carousel class="testmonial-section-carousel" dir="ltr" [value]="testmonials" [numVisible]="1" [numScroll]="1"
+            [showIndicators]="false" [circular]="true">
+            <ng-template let-testmonial pTemplate="item">
+                <div [dir]="'dir'|translate">
+                    <div class="content col-lg-9 col-11 mx-auto">
+                        <p>{{testmonial.description}}</p>
+                        <div class="d-flex gap-3 align-items-center mt-4">
+                            <i class="d-none d-lg-block"
+                                [class]="(('dir'|translate) == 'rtl') ? 'fa-solid fa-quote-left' : 'fa-solid fa-quote-right'"></i>
+                            <div>
+                                <h5>{{testmonial.job}}</h5>
+                                <h6>الرواسي للمقاولات</h6>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ng-template>
+        </p-carousel>
+    </div>
+</section>
