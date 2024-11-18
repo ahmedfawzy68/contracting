@@ -9,11 +9,12 @@ import { AboutUsSectionComponent } from './components/about-us-section/about-us-
 import { TranslateModule } from '@ngx-translate/core';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { WhyUsSectionComponent } from './components/why-us-section/why-us-section.component';
-import { BookConsultationComponent } from './components/book-consultation/book-consultation.component';
+import { BookConsultationSectionComponent } from './components/book-consultation-section/book-consultation-section.component';
 import { ServicesSectionComponent } from './components/services-section/services-section.component';
 import { GoalsSectionComponent } from './components/goals-section/goals-section.component';
 import { OurProjectsSectionComponent } from './components/our-projects-section/our-projects-section.component';
 import { TestmonialSectionComponent } from './components/testmonial-section/testmonial-section.component';
+import { RequestConsultationSectionComponent } from './components/request-consultation-section/request-consultation-section.component';
 
 
 @NgModule({
@@ -22,11 +23,12 @@ import { TestmonialSectionComponent } from './components/testmonial-section/test
     HeroSectionComponent,
     AboutUsSectionComponent,
     WhyUsSectionComponent,
-    BookConsultationComponent,
+    BookConsultationSectionComponent,
     ServicesSectionComponent,
     GoalsSectionComponent,
     OurProjectsSectionComponent,
-    TestmonialSectionComponent
+    TestmonialSectionComponent,
+    RequestConsultationSectionComponent
   ],
   imports: [
     CommonModule,

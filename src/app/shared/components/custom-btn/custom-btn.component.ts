@@ -7,5 +7,7 @@ import { Component, Input } from '@angular/core';
 })
 export class CustomBtnComponent {
   @Input() btnName: string = '';
+  @Input() backgroundColor: string = '#5772e8';
+  @Input() color: string = '';
 
 }

@@ -1,1 +1,5 @@
-<button><i class="fa-solid fa-arrow-left-long ms-2"></i>{{btnName}}</button>
+<button [ngStyle]="{'--dynamic-bg-color': backgroundColor, color:color}">
+    <span>
+        <i class="fa-solid fa-arrow-left-long ms-2"></i>{{btnName}}
+    </span>
+</button>

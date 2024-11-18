@@ -1,0 +1,19 @@
+section {
+  background-image: url(../../../../../assets/imgs/slide2.png);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 373px;
+  background-attachment: fixed;
+  border-radius: 100px 0px 100px 0px;
+  h2 {
+    font-size: 50px;
+  }
+  button{
+    background-color: var(--forth-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: .8rem 2.05rem;
+  }
+}
