@@ -12,47 +12,47 @@ export class ServicesSectionComponent {
     {
       icon: "assets/imgs/construction-1.svg",
       title: "التخطيط والتصميم",
-      background: "../../../../../assets/imgs/slide1.png"
+      background: "../../../../../assets/imgs/building1.jpg"
     },
     {
       icon: "assets/imgs/construction-1.svg",
       title: "التنفيذ وإدارة المشاريع",
-      background: "../../../../../assets/imgs/slide2.png"
+      background: "../../../../../assets/imgs/building2.jpg"
     },
     {
       icon: "assets/imgs/construction-1.svg",
       title: "التخطيط والتصميم",
-      background: "../../../../../assets/imgs/slide3.png"
+      background: "../../../../../assets/imgs/building3.jpg"
     },
     {
       icon: "assets/imgs/construction-1.svg",
       title: "التخطيط والتصميم",
-      background: "../../../../../assets/imgs/slide1.png"
+      background: "../../../../../assets/imgs/building4.jpg"
     },
     {
       icon: "assets/imgs/construction-1.svg",
       title: "التخطيط والتصميم",
-      background: "../../../../../assets/imgs/slide2.png"
+      background: "../../../../../assets/imgs/building5.jpg"
     },
     {
       icon: "assets/imgs/construction-1.svg",
       title: "التخطيط والتصميم",
-      background: "../../../../../assets/imgs/slide3.png"
+      background: "../../../../../assets/imgs/building6.jpg"
     },
     {
       icon: "assets/imgs/construction-1.svg",
       title: "التخطيط والتصميم",
-      background: "../../../../../assets/imgs/slide1.png"
+      background: "../../../../../assets/imgs/building7.jpg"
     },
     {
       icon: "assets/imgs/construction-1.svg",
       title: "التخطيط والتصميم",
-      background: "../../../../../assets/imgs/slide2.png"
+      background: "../../../../../assets/imgs/building8.jpg"
     },
     {
       icon: "assets/imgs/construction-1.svg",
       title: "التخطيط والتصميم",
-      background: "../../../../../assets/imgs/slide3.png"
+      background: "../../../../../assets/imgs/building9.jpg"
     },
   ]
 

@@ -21,15 +21,21 @@
   font-size: 25px;
   font-weight: 500;
   color: var(--secondary-color);
-  letter-spacing: 0.25em;
   margin-bottom: 25px;
   text-transform: uppercase;
   &::before {
     content: "";
     border: 5px solid var(--forth-color);
     border-top-color: transparent;
-    border-left-color: transparent;
     display: inline-block;
+    [dir="rtl"] & {
+      border-left-color: transparent;
+      margin-left: 5px;
+    }
+    [dir="ltr"] & {
+      border-right-color: transparent;
+      margin-right: 5px;
+    }
   }
 }
 .slug-title {

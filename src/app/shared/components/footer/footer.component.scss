@@ -1,12 +1,22 @@
 footer {
-  background-image: url(../../../../assets/imgs/slide1.png);
+  background-image: url(../../../../assets/imgs/building11.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  background-attachment: fixed;
   position: relative;
   clip-path: ellipse(100% 95% at 50% 100%);
   padding-top: 150px;
-
+  position: relative;
+  &:after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+  }
   h4 {
     font-size: 25px;
     font-weight: 600;
@@ -80,4 +90,8 @@ footer {
     clip-path: unset;
     padding-top: 100px;
   }
+}
+.row , .copy-rights{
+  position: relative;
+  z-index: 2;
 }

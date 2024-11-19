@@ -1,10 +1,10 @@
-<section dir="rtl" class="my-5">
+<section class="my-5">
     <div class="container">
         <div class="text-center">
             <div class="slug pb-5">
-                شركاء النجاح
+                {{'home.success-partners' | translate}}
             </div>
-            <swiper-container [pagination]="false" [navigation]="false" [loop]="true"
+            <swiper-container dir="ltr" [pagination]="false" [navigation]="false" [loop]="true"
                 [breakpoints]="breakpoints">
                 <swiper-slide *ngFor="let swiper of swipers">
                     <img [src]="swiper" width="200" alt="swiper">

@@ -4,8 +4,20 @@
   "navbar": {
     "home": "Home",
     "about-us": "About Us",
-    "portfolio": "Portfolio",
+    "portfolio": "Our Portfolio",
     "services": "Services",
-    "contact-us": "Contact US"
+    "contact-us": "Contact Us"
+  },
+  "home": {
+    "company-name": "Al-Rawasi Contracting",
+    "why-us": "Why Choose Us",
+    "services-title": "Qemmet Al-Rawasi General Contracting Company Offers a Comprehensive Range of Services",
+    "our-works": "Our Works",
+    "our-works-title": "Qemmet Al-Rawasi General Contracting Company Has Executed Various Diverse Projects",
+    "request-consultation": "Request a Free Consultation Now",
+    "success-partners": "Success Partners"
+  },
+  "about": {
+    "why-qemmet-alrawasi": "Why Al-Rawasi Contracting"
   }
 }

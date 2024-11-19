@@ -5,6 +5,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import { RouterModule } from '@angular/router';
 import { CustomBtnComponent } from './components/custom-btn/custom-btn.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { CoverComponent } from './components/cover/cover.component';
 
 
 
@@ -12,7 +13,8 @@ import { FooterComponent } from './components/footer/footer.component';
   declarations: [
     NavbarComponent,
     CustomBtnComponent,
-    FooterComponent
+    FooterComponent,
+    CoverComponent
   ],
   imports: [
     CommonModule,
@@ -22,7 +24,8 @@ import { FooterComponent } from './components/footer/footer.component';
   exports: [
     NavbarComponent,
     CustomBtnComponent,
-    FooterComponent
+    FooterComponent,
+    CoverComponent
   ]
 })
 export class SharedModule { }

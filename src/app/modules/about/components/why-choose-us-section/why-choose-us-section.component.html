@@ -1,0 +1,26 @@
+<section>
+    <div class="container">
+        <header class="d-flex align-items-center justify-content-between flex-wrap mb-5">
+            <div class="mb-3">
+                <div class="slug">
+                    {{'home.company-name'|translate}}
+                </div>
+                <div class="slug-title">
+                    {{'home.why-us'|translate}}
+                </div>
+            </div>
+            <p class="col-lg-7 col-md-9 mb-3">
+                هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث يمكنك
+                أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق. إذا كنت
+                تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص العربى زيادة عدد الف
+            </p>
+        </header>
+        <div class="row g-0 d-flex justify-content-center">
+            <div *ngFor="let card of whyUsCards" class="col-lg-4 col-md-6">
+                <app-why-us-card [title]="card.title" [description]="card.description" [icon]="card.icon"
+                    [overLayerColor]="card.overLayerColor" [backgroundImage]="card.backgroundImage"
+                    [color]="card.color?card.color:'#fff'"></app-why-us-card>
+            </div>
+        </div>
+    </div>
+</section>

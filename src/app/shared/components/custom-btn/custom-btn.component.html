@@ -1,5 +1,6 @@
-<button [ngStyle]="{'--dynamic-bg-color': backgroundColor, color:color}">
+<button [ngStyle]="{'--dynamic-bg-color': backgroundColor}">
     <span>
-        <i class="fa-solid fa-arrow-left-long ms-2"></i>{{btnName}}
+        <i [class]="(('dir'|translate) == 'ltr')?'me-2 fa-arrow-right-long':'ms-2 fa-arrow-left-long'"
+            class="fa-solid"></i>{{btnName}}
     </span>
 </button>

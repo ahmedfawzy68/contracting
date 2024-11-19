@@ -1,0 +1,27 @@
+section {
+  transform: translateY(-100px);
+  .content {
+    background-color: #fff;
+    padding-block: 100px;
+    clip-path: polygon(50px 0, 100% 0, 100% 100%, 0 100%, 0 50px);
+    height: 100%;
+    .slug{
+        font-size: 14px;
+    }
+    .slug-title {
+        font-size: 50px;
+    }
+    p {
+      font-size: 18px;
+    }
+  }
+  img{
+    min-height: 500px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  section img{
+    min-height: 300px;
+  }
+}

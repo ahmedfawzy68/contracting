@@ -1,0 +1,8 @@
+<div [ngStyle]="{'background-image': 'url(' + backgroundImage + ')','color': color}" class="why-us-card text-center h-100 d-flex align-items-center">
+    <div class="overlayer" [ngStyle]="{'background-color': overLayerColor}"></div>
+    <span>
+        <img [src]="icon" width="150" alt="title">
+        <h4 class="my-4">{{title}}</h4>
+        <p>{{description}}</p>
+    </span>
+</div>
