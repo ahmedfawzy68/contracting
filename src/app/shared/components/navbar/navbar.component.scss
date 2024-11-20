@@ -1,13 +1,16 @@
-nav{
+nav {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 100;
+  li a {
+    color: var(--primary-color);
+  }
   .nav-item {
     cursor: pointer;
     .active {
-      color: var(--forth-color) !important;
+      color: var(--forth-color);
     }
     font-weight: 600;
     &:focus-visible {
@@ -22,10 +25,10 @@ nav{
     color: var(--primary-color);
   }
   button {
-      border: none;
-      i{
-          font-size: 30px;
-      }
+    border: none;
+    i {
+      font-size: 30px;
+    }
     &:focus {
       box-shadow: none;
     }
