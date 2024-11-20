@@ -1,0 +1,15 @@
+<section class="container">
+    <div class="text-center pb-5">
+        <div class="slug">
+            {{'services.offers'|translate}}
+        </div>
+        <div class="slug-title">
+            {{'navbar.services'|translate}}
+        </div>
+    </div>
+    <div class="row">
+        <div *ngFor="let card of servicesCards" class="col-lg-4 col-md-6 mb-4">
+            <app-services-card [title]="card.title" [image]="card.image"></app-services-card>
+        </div>
+    </div>
+</section>

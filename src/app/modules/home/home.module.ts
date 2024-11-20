@@ -5,7 +5,6 @@ import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 import { HeroSectionComponent } from './components/hero-section/hero-section.component';
 import { CarouselModule } from 'primeng/carousel';
-import { AboutUsSectionComponent } from './components/about-us-section/about-us-section.component';
 import { TranslateModule } from '@ngx-translate/core';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { WhyUsSectionComponent } from './components/why-us-section/why-us-section.component';
@@ -21,7 +20,6 @@ import { SwiperComponent } from './components/swiper/swiper.component';
   declarations: [
     HomeComponent,
     HeroSectionComponent,
-    AboutUsSectionComponent,
     WhyUsSectionComponent,
     BookConsultationSectionComponent,
     ServicesSectionComponent,
