@@ -4,23 +4,33 @@
   "navbar": {
     "home": "Home",
     "about-us": "About Us",
-    "portfolio": "Portfolio",
+    "portfolio": "Our Portfolio",
     "services": "Services",
     "contact-us": "Contact Us"
   },
   "home": {
-    "company-name": "Al-Rawasi Contracting",
+    "company-name": "Al Rawasi Contracting",
     "why-us": "Why Choose Us",
-    "services-title": "Qemmet Al-Rawasi General Contracting Company Offers a Comprehensive Range of Services",
-    "our-works": "Our Works",
-    "our-works-title": "Qemmet Al-Rawasi General Contracting Company Executes a Variety of Diverse Projects",
+    "services-title": "Qemmet Al Rawasi General Contracting offers a comprehensive range of services",
+    "our-works": "Our Work",
+    "our-works-title": "Qemmet Al Rawasi General Contracting has executed a variety of diverse projects",
     "request-consultation": "Request a Free Consultation Now",
-    "success-partners": "Success Partners"
+    "success-partners": "Partners of Success"
   },
   "about": {
-    "why-qemmet-alrawasi": "Why Al-Rawasi Contracting"
+    "why-qemmet-alrawasi": "Why Qemmet Al Rawasi"
   },
   "services": {
     "offers": "What We Offer"
+  },
+  "contact-us": {
+    "form-title": "We are happy to connect with you and help you achieve your goal in the shortest time possible.",
+    "enter": "Enter",
+    "name": "First Name",
+    "last-name": "Last Name",
+    "email": "Email Address",
+    "subject": "Subject",
+    "message": "Message",
+    "send": "Send"
   }
 }

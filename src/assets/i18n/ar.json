@@ -17,10 +17,22 @@
     "request-consultation": "أطلب إستشارة مجانية الآن",
     "success-partners": "شركاء النجاح"
   },
-  "about":{
+  "about": {
     "why-qemmet-alrawasi": "لماذا الرواسي للمقاولات"
   },
-  "services":{
+  "services": {
     "offers": "ماذا نقدم"
+  },
+  "contact-us": {
+    "form-title": "يسعدنا تواصلك معنا وسنساعدك في الوصول لهدفك في اسرع وقت .",
+    "enter": "ادخل",
+    "name": "الاسم",
+    "last-name": "الاسم الاخير",
+    "email": "البريد الإلكتروني",
+    "subject": "الموضوع",
+    "message": "الرسالة",
+    "send": "ارسل",
+    "main-branch": "الفرع الرئيسي",
+    "other-branches": "فروع أخرى"
   }
 }

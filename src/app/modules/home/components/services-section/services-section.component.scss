@@ -9,11 +9,18 @@ section {
     overflow: hidden;
     cursor: pointer;
     transition: all 300ms ease-in-out;
+    position: relative;
     img {
       transition: all 300ms;
     }
     &:hover {
       background: center center/cover no-repeat;
+      &::after{
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-color: rgba(0,0,0,0.5);
+      }
       h5 {
         color: #fff;
         transform: translateY(-30px);
@@ -30,8 +37,12 @@ section {
       transition: all 300ms;
       font-size: 22px;
       color: var(--primary-color);
+      position: relative;
+      z-index: 2;
     }
     span {
+      position: relative;
+      z-index: 2;
       font-size: 14px;
       transform: translateY(350%);
       display: block;

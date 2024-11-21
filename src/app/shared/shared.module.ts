@@ -7,6 +7,7 @@ import { CustomBtnComponent } from './components/custom-btn/custom-btn.component
 import { FooterComponent } from './components/footer/footer.component';
 import { CoverComponent } from './components/cover/cover.component';
 import { IntroSectionComponent } from '../modules/home/components/intro-section/intro-section.component';
+import { CustomInputComponent } from './components/custom-input/custom-input.component';
 
 
 
@@ -16,7 +17,8 @@ import { IntroSectionComponent } from '../modules/home/components/intro-section/
     CustomBtnComponent,
     FooterComponent,
     IntroSectionComponent,
-    CoverComponent
+    CoverComponent,
+    CustomInputComponent
   ],
   imports: [
     CommonModule,
@@ -28,7 +30,8 @@ import { IntroSectionComponent } from '../modules/home/components/intro-section/
     CustomBtnComponent,
     FooterComponent,
     IntroSectionComponent,
-    CoverComponent
+    CoverComponent,
+    CustomInputComponent
   ]
 })
 export class SharedModule { }

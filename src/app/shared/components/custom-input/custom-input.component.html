@@ -1,0 +1,7 @@
+<label class="form-label">{{label}}</label>
+<ng-container [ngSwitch]="isInput">
+    <input *ngSwitchCase="true" [type]="type" class="form-control" [required]="isRequired"
+        [placeholder]="('contact-us.enter'|translate) + ' ' + label">
+    <textarea rows="10" *ngSwitchCase="false" class="form-control" [required]="isRequired"
+        [placeholder]="('contact-us.enter'|translate) + ' ' + label"></textarea>
+</ng-container>

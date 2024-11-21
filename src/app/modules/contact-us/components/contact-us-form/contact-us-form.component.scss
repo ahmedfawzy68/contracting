@@ -1,0 +1,40 @@
+section {
+  .slug {
+    font-size: 36px;
+  }
+  .slug-title {
+    font-size: 18px;
+  }
+  .info {
+    padding: 50px;
+    h3 {
+      font-size: 24px;
+    }
+    p {
+      font-size: 20px;
+      transition: all 200ms ease-in-out;
+      cursor: pointer;
+      &:hover {
+        color: var(--secondary-color);
+      }
+    }
+    .social-media{
+      i {
+        font-size: 20px;
+        color: var(--primary-color);
+      }
+    }
+  }
+  .form-box {
+    padding: 50px;
+    clip-path: polygon(50px 0, 100% 0, 100% 100%, 0 100%, 0 50px);
+  }
+}
+@media screen and (max-width: 767px) {
+  section {
+    .form-box,
+    .info {
+      padding: 30px;
+    }
+  }
+}

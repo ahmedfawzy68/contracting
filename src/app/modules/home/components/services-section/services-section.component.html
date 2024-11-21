@@ -8,7 +8,7 @@
             [responsiveOptions]="responsiveOptions" [numVisible]="4" [numScroll]="1" [showIndicators]="false"
             [circular]="true">
             <ng-template let-service pTemplate="item">
-                <div class="p-3">
+                <div class="p-3 content">
                     <div [ngStyle]="service.hoverStyle" (mouseenter)="onHover(service)" (mouseleave)="onLeave(service)" [dir]="'dir'|translate" class="services-box">
                         <div class="d-flex flex-column gap-5 mb-3">
                             <img [src]="service.icon" width="100px" draggable="false" [alt]="service.title">
