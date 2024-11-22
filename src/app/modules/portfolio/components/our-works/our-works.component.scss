@@ -1,0 +1,19 @@
+.slug {
+  font-size: 30px;
+}
+.slug-title {
+  font-size: 20px;
+}
+.img-container {
+  height: 320px;
+  overflow: hidden;
+  img {
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+    &:hover {
+      transform: scale(1.3);
+    }
+  }
+}
