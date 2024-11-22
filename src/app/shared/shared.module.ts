@@ -8,6 +8,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { CoverComponent } from './components/cover/cover.component';
 import { IntroSectionComponent } from '../modules/home/components/intro-section/intro-section.component';
 import { CustomInputComponent } from './components/custom-input/custom-input.component';
+import { WhatsappBtnComponent } from './components/whatsapp-btn/whatsapp-btn.component';
 
 
 
@@ -18,7 +19,8 @@ import { CustomInputComponent } from './components/custom-input/custom-input.com
     FooterComponent,
     IntroSectionComponent,
     CoverComponent,
-    CustomInputComponent
+    CustomInputComponent,
+    WhatsappBtnComponent
   ],
   imports: [
     CommonModule,
@@ -31,7 +33,8 @@ import { CustomInputComponent } from './components/custom-input/custom-input.com
     FooterComponent,
     IntroSectionComponent,
     CoverComponent,
-    CustomInputComponent
+    CustomInputComponent,
+    WhatsappBtnComponent
   ]
 })
 export class SharedModule { }

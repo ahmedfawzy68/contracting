@@ -6,9 +6,12 @@
                 <div [dir]="'dir'|translate">
                     <div class="content col-lg-9 col-11 mx-auto">
                         <p>{{testmonial.description}}</p>
-                        <div class="d-flex gap-3 align-items-center mt-4">
-                            <i class="d-none d-lg-block"
+                        <div
+                            class="d-flex gap-3 align-items-center mt-4 flex-wrap">
+                            <i
                                 [class]="(('dir'|translate) == 'rtl') ? 'fa-solid fa-quote-left' : 'fa-solid fa-quote-right'"></i>
+                            <img src="https://www.qemmetalrawasi.org/qemmetal-backend/public/uploads/members/1732278305tTkoOhm3GXGtDPsrGXmB.png"
+                                width="50px" class="rounded-circle" [alt]="testmonial.job">
                             <div>
                                 <h5>{{testmonial.job}}</h5>
                                 <h6>الرواسي للمقاولات</h6>

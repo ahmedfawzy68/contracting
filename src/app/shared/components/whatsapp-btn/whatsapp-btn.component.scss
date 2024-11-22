@@ -1,0 +1,15 @@
+.whatsapp-floating-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 10;
+  border: none;
+  background-color: #25D366;
+  font-size: 35px;
+  color: white;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+}

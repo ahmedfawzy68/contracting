@@ -15,6 +15,7 @@ import { OurProjectsSectionComponent } from './components/our-projects-section/o
 import { TestmonialSectionComponent } from './components/testmonial-section/testmonial-section.component';
 import { RequestConsultationSectionComponent } from './components/request-consultation-section/request-consultation-section.component';
 import { SwiperComponent } from './components/swiper/swiper.component';
+import { ScrollToTopBtnComponent } from './components/scroll-to-top-btn/scroll-to-top-btn.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { SwiperComponent } from './components/swiper/swiper.component';
     OurProjectsSectionComponent,
     TestmonialSectionComponent,
     RequestConsultationSectionComponent,
-    SwiperComponent
+    SwiperComponent,
+    ScrollToTopBtnComponent
   ],
   imports: [
     CommonModule,
