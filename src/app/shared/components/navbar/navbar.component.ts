@@ -8,7 +8,9 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class NavbarComponent {
 
-  constructor(private _translate: TranslateService) { }
+  constructor(private _translate: TranslateService) {
+    this._translate.use(localStorage.getItem('lang') || 'ar');
+  }
 
   lists = [
     { name: "navbar.home", link: "home" },
@@ -16,10 +18,12 @@ export class NavbarComponent {
     { name: "navbar.portfolio", link: "portfolio" },
     { name: "navbar.services", link: "services" },
     { name: "navbar.contact-us", link: "contact-us" },
-  ]
+  ];
 
   changeLanguage() {
-    this._translate.use(this._translate.currentLang === 'en' ? 'ar' : 'en');
+    const newLang = this._translate.currentLang === 'en' ? 'ar' : 'en';
+    this._translate.use(newLang);
+    localStorage.setItem('lang', newLang);
   }
 
 }

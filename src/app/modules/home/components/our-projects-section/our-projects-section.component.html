@@ -1,4 +1,4 @@
-<section>
+<section *ngIf="projects">
     <div class="container py-5">
         <div class="text-center">
             <div class="slug">
@@ -9,14 +9,14 @@
             </div>
         </div>
         <div class="row mt-5">
-            <div *ngFor="let project of projects" class="col-lg-4 col-md-6 mb-4">
+            <div *ngFor="let project of projects.items" class="col-lg-4 col-md-6 mb-4">
                 <div class="project-card-wrapper">
                     <div class="project-card d-flex justify-content-center align-items-center">
-                        <div class="card-front d-flex justify-content-center align-items-center" [style.background-image]="'url(' + project.image + ')'">
-                            <span>{{project.name}}</span>
+                        <div class="card-front d-flex justify-content-center align-items-center" [style.background-image]="'url(' + project.image_path + ')'">
+                            <span>{{project.title}}</span>
                         </div>
                         <div class="card-back text-center d-flex justify-content-center align-items-center container">
-                            <span>{{project.description}}</span>
+                            <!-- <span>{{project.description}}</span> -->
                         </div>
                     </div>
                 </div>

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { HomeBookingSection } from 'src/app/core/interfaces/home';
 
 @Component({
   selector: 'app-book-consultation-section',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./book-consultation-section.component.scss']
 })
 export class BookConsultationSectionComponent {
+  @Input() home_booking_section!: HomeBookingSection;
 
 }

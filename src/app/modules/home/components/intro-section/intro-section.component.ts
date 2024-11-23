@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { AboutUsSection } from 'src/app/core/interfaces/home';
 
 @Component({
   selector: 'app-intro-section',
@@ -6,10 +7,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./intro-section.component.scss']
 })
 export class IntroSectionComponent {
-  @Input() slug: string = '';
-  @Input() title: string = '';
-  @Input() description: string = '';
-  @Input() image: string = '';
-  @Input() button: boolean = true;
+  @Input() about_us_section!: AboutUsSection;
+  @Input() isBtn: boolean = false;
 
 }

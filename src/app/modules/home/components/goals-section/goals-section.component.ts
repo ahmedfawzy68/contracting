@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Carousel } from 'primeng/carousel';
+import { Goal } from 'src/app/core/interfaces/home';
 
 @Component({
   selector: 'app-goals-section',
@@ -7,11 +8,8 @@ import { Carousel } from 'primeng/carousel';
   styleUrls: ['./goals-section.component.scss'],
 })
 export class GoalsSectionComponent {
-  slides = [
-    { title: 'رؤيتنا', content: 'نسعى لأن نكون الشركة الرائدة والمرجعية في مجال المقاولات العامة، من خلال تقديم حلول مبتكرة وجودة عالية في جميع مشاريعنا.', bg: "assets/imgs/building4.jpg" },
-    { title: 'رسالتنا', content: 'تتمثل رسالتنا في تحقيق رضا العملاء من خلال تقديم خدمات ممتازة، والالتزام بالجودة، والابتكار، والموثوقية في تنفيذ المشاريع،', bg: "assets/imgs/building5.jpg" },
-    { title: 'أهدافنا', content: 'هدف إلى تحقيق النجاح المستدام والنمو المستمر من خلال تنفيذ مشاريع ذات جودة عالية، وتحقيق رضا العملاء، وتطوير قدراتنا', bg: "assets/imgs/building6.jpg" }
-  ];
+
+  @Input() goals_section!: Goal[];
   activeIndex = 0;
 
   onPageChange(event: any) {

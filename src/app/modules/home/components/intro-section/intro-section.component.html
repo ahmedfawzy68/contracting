@@ -1,16 +1,20 @@
-<section class="container">
+<section *ngIf="about_us_section" class="container">
     <div class="about-us-container py-lg-0 py-5">
         <div class="row">
             <div class="col-lg-7 mb-lg-0 mb-4 p-5 d-flex align-items-center">
                 <div>
-                    <div class="slug">{{slug}}</div>
-                    <div class="slug-title mb-5">{{title}}</div>
-                    <p class="col col-lg-11 mb-4">{{description}}</p>
-                    <app-custom-btn *ngIf="button" btnName="آعرف اكثر"></app-custom-btn>
+                    <div class="slug">{{about_us_section.slug}}</div>
+                    <div class="slug-title mb-5">{{about_us_section.title}}</div>
+                    <p class="col col-lg-11 mb-4">{{about_us_section.description}}</p>
+                    <a *ngIf="about_us_section.btn_url && isBtn" [href]="about_us_section.btn_url" target="_blank">
+                        <app-custom-btn [btnName]="about_us_section.btn_text"></app-custom-btn>
+                    </a>
+                    <app-custom-btn *ngIf="!about_us_section.btn_url && isBtn" routerLink="/about-us"
+                        [btnName]="about_us_section.btn_text"></app-custom-btn>
                 </div>
             </div>
             <div class="col-lg-5 mb-lg-0 mb-4">
-                <img [src]="image" width="100%" [alt]="slug">
+                <img [src]="about_us_section.image" width="100%" [alt]="about_us_section.slug">
             </div>
         </div>
     </div>

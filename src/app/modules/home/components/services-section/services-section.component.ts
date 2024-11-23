@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Carousel } from 'primeng/carousel';
+import { ServicesSection } from 'src/app/core/interfaces/home';
 
 @Component({
   selector: 'app-services-section',
@@ -7,54 +8,7 @@ import { Carousel } from 'primeng/carousel';
   styleUrls: ['./services-section.component.scss']
 })
 export class ServicesSectionComponent {
-
-  services:any = [
-    {
-      icon: "assets/imgs/construction-1.svg",
-      title: "التخطيط والتصميم",
-      background: "../../../../../assets/imgs/building1.jpg"
-    },
-    {
-      icon: "assets/imgs/construction-1.svg",
-      title: "التنفيذ وإدارة المشاريع",
-      background: "../../../../../assets/imgs/building2.jpg"
-    },
-    {
-      icon: "assets/imgs/construction-1.svg",
-      title: "التخطيط والتصميم",
-      background: "../../../../../assets/imgs/building3.jpg"
-    },
-    {
-      icon: "assets/imgs/construction-1.svg",
-      title: "التخطيط والتصميم",
-      background: "../../../../../assets/imgs/building4.jpg"
-    },
-    {
-      icon: "assets/imgs/construction-1.svg",
-      title: "التخطيط والتصميم",
-      background: "../../../../../assets/imgs/building5.jpg"
-    },
-    {
-      icon: "assets/imgs/construction-1.svg",
-      title: "التخطيط والتصميم",
-      background: "../../../../../assets/imgs/building6.jpg"
-    },
-    {
-      icon: "assets/imgs/construction-1.svg",
-      title: "التخطيط والتصميم",
-      background: "../../../../../assets/imgs/building7.jpg"
-    },
-    {
-      icon: "assets/imgs/construction-1.svg",
-      title: "التخطيط والتصميم",
-      background: "../../../../../assets/imgs/building8.jpg"
-    },
-    {
-      icon: "assets/imgs/construction-1.svg",
-      title: "التخطيط والتصميم",
-      background: "../../../../../assets/imgs/building9.jpg"
-    },
-  ]
+  @Input() services_section!: ServicesSection;
 
   responsiveOptions = [
     {
@@ -74,7 +28,7 @@ export class ServicesSectionComponent {
     }
   ]
 
-  constructor() { 
+  constructor() {
     this.carouselTouch();
   }
 
@@ -82,11 +36,11 @@ export class ServicesSectionComponent {
     Carousel.prototype.onTouchMove = () => { };
   }
 
-  onHover(service:any){
-    service.hoverStyle = {backgroundImage: `url(${service.background})`}
+  onHover(service: any) {
+    service.hoverStyle = { backgroundImage: `url(${service.background})` }
   }
-  
-  onLeave(service:any){
+
+  onLeave(service: any) {
     service.hoverStyle = {}
   }
 

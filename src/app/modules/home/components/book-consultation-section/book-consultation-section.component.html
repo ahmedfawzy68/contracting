@@ -1,17 +1,21 @@
-<section class="d-flex align-items-center pt-5">
+<section *ngIf="home_booking_section" [style]="'background-image:url('+home_booking_section.background+')'" class="d-flex align-items-center pt-5">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 mb-4 d-flex align-items-center">
                 <div>
-                    <div class="slug">نبحث عن فرص التحسين والابتكار</div>
-                    <h2>نضع العملاء في صميم أولوياتنا</h2>
+                    <div class="slug">{{home_booking_section.slug}}</div>
+                    <h2>{{home_booking_section.title}}</h2>
                 </div>
             </div>
             <div class="col-lg-4 mb-4 d-flex justify-content-end">
                 <div class="consultation-box-container">
                     <div class="consultation-box text-center w-100">
-                        <h3 class="mb-5">احجز استشارتك الان</h3>
-                        <app-custom-btn [btnName]="'navbar.contact-us'|translate"></app-custom-btn>
+                        <h3 class="mb-5">{{home_booking_section.box_title}}</h3>
+                        <a *ngIf="home_booking_section.button_url" [href]="home_booking_section.button_url">
+                            <app-custom-btn [btnName]="home_booking_section.button_text"></app-custom-btn>
+                        </a>
+                        <app-custom-btn *ngIf="!home_booking_section.button_url" routerLink="/contact-us" [btnName]="home_booking_section.button_text"></app-custom-btn>
+                        
                     </div>
                 </div>
             </div>
