@@ -15,7 +15,6 @@ export class CacheInterceptor implements HttpInterceptor {
   constructor(private cacheService: CacheService) {}
 
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
-    // Only cache GET requests
     if (request.method !== 'GET') {
       return next.handle(request);
     }

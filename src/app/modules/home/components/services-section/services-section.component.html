@@ -1,24 +1,55 @@
-<section *ngIf="services_section">
+<section>
     <div class="container py-5">
-        <div class="text-center mb-5">
-            <div class="slug">{{services_section.slug}}</div>
-            <div class="slug-title">{{services_section.title}}</div>
-        </div>
-        <p-carousel class="service-section-carousel" dir="ltr" [value]="services_section.items"
-            [responsiveOptions]="responsiveOptions" [numVisible]="4" [numScroll]="1" [showIndicators]="false"
-            [circular]="true">
-            <ng-template let-service pTemplate="item">
-                <div class="p-3 content">
-                    <div [ngStyle]="service.hoverStyle" (mouseenter)="onHover(service)" (mouseleave)="onLeave(service)"
-                        [dir]="'dir'|translate" class="services-box">
-                        <div class="d-flex flex-column gap-5 mb-3">
-                            <img [src]="service.icon" width="100px" draggable="false" [alt]="service.title">
-                            <h5>{{service.title}}</h5>
-                        </div>
-                        <span routerLink="/contact-us">تواصل معنا<i class="fa-solid fa-arrow-right-long me-1"></i></span>
+        <ng-container *ngIf="loading">
+            <app-custom-skelton center="mx-auto" width="110px" height="20px"></app-custom-skelton>
+            <div class="mt-4 mb-5">
+                <app-custom-skelton center="mx-auto" width="70%" height="30px"></app-custom-skelton>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="skelton-box">
+                        <app-custom-skelton width="100%" height="310px"></app-custom-skelton>
                     </div>
                 </div>
-            </ng-template>
-        </p-carousel>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="skelton-box">
+                        <app-custom-skelton width="100%" height="310px"></app-custom-skelton>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="skelton-box">
+                        <app-custom-skelton width="100%" height="310px"></app-custom-skelton>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="skelton-box">
+                        <app-custom-skelton width="100%" height="310px"></app-custom-skelton>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+        <ng-container *ngIf="services_section">
+            <div class="text-center mb-5">
+                <div class="slug">{{services_section.slug}}</div>
+                <div class="slug-title">{{services_section.title}}</div>
+            </div>
+            <p-carousel class="service-section-carousel" dir="ltr" [value]="services_section.items"
+                [responsiveOptions]="responsiveOptions" [numVisible]="4" [numScroll]="1" [showIndicators]="false"
+                [circular]="true">
+                <ng-template let-service pTemplate="item">
+                    <div class="p-3 content">
+                        <div [ngStyle]="service.hoverStyle" (mouseenter)="onHover(service)"
+                            (mouseleave)="onLeave(service)" [dir]="'dir'|translate" class="services-box">
+                            <div class="d-flex flex-column gap-5 mb-3">
+                                <img [src]="service.icon" width="100px" draggable="false" [alt]="service.title">
+                                <h5>{{service.title}}</h5>
+                            </div>
+                            <span routerLink="/contact-us">تواصل معنا<i
+                                    class="fa-solid fa-arrow-right-long me-1"></i></span>
+                        </div>
+                    </div>
+                </ng-template>
+            </p-carousel>
+        </ng-container>
     </div>
 </section>

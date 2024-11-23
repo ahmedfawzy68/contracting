@@ -4,6 +4,16 @@
             <div class="slug pb-5">
                 {{'home.success-partners' | translate}}
             </div>
+            <ng-container *ngIf="loading">
+                <div class="row">
+                    <swiper-container dir="ltr" [pagination]="false" [navigation]="false" [loop]="true"
+                        [breakpoints]="breakpoints">
+                        <swiper-slide *ngFor="let _ of [1,2,3,4]">
+                            <app-custom-skelton width="100%" height="100px"></app-custom-skelton>
+                        </swiper-slide>
+                    </swiper-container>
+                </div>
+            </ng-container>
             <swiper-container dir="ltr" [pagination]="false" [navigation]="false" [loop]="true"
                 [breakpoints]="breakpoints">
                 <swiper-slide *ngFor="let swiper of swipers">

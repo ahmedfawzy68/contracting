@@ -8,6 +8,7 @@ import { ProjectsSection } from 'src/app/core/interfaces/home';
 })
 export class OurProjectsSectionComponent {
   @Input() projects!: ProjectsSection;
+  @Input() loading!: boolean;
 
   // projects = [
   //   {

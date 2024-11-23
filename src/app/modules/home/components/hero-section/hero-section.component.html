@@ -1,3 +1,4 @@
+<app-custom-skelton *ngIf="loading" width="100%" height="100vh"></app-custom-skelton>
 <p-carousel class="hero-section-carousel" dir="ltr" [value]="carouselSection" [numVisible]="1" [numScroll]="1"
     [autoplayInterval]="5000" [showIndicators]="false" [circular]="true">
     <ng-template let-carousel pTemplate="item">
@@ -6,7 +7,8 @@
                 <div class="content container">
                     <h2 class="mb-5">{{carousel.title}}</h2>
                     <p class="col-lg-6 col-md-9 mx-auto mb-5">{{carousel.description}}</p>
-                    <a *ngIf="carousel.link" [href]="carousel.link" target="_blank"><button>{{carousel.btn_text}}</button></a>
+                    <a *ngIf="carousel.link" [href]="carousel.link"
+                        target="_blank"><button>{{carousel.btn_text}}</button></a>
                     <a *ngIf="!carousel.link" routerLink="/contact-us"><button>{{carousel.btn_text}}</button></a>
                 </div>
             </div>

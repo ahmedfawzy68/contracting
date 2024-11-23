@@ -1,11 +1,12 @@
-<app-hero-section [carouselSection]="sliders"></app-hero-section>
-<app-intro-section [isBtn]="true" [about_us_section]="about_us_section"></app-intro-section>
-<app-why-us-section [whyUsSection]="why_us_section"></app-why-us-section>
-<app-book-consultation-section [home_booking_section]="home_booking_section"></app-book-consultation-section>
-<app-services-section [services_section]="services_section"></app-services-section>
-<app-goals-section [goals_section]="goals_section"></app-goals-section>
-<app-our-projects-section [projects]="projects"></app-our-projects-section>
-<app-testmonial-section [testmonials]="testimonials"></app-testmonial-section>
+<app-hero-section [loading]="loading" [carouselSection]="sliders"></app-hero-section>
+<app-intro-section [loading]="loading" [isBtn]="true" [about_us_section]="about_us_section"></app-intro-section>
+<app-why-us-section [loading]="loading" [whyUsSection]="why_us_section"></app-why-us-section>
+<app-book-consultation-section [loading]="loading"
+    [home_booking_section]="home_booking_section"></app-book-consultation-section>
+<app-services-section [loading]="loading" [services_section]="services_section"></app-services-section>
+<app-goals-section [loading]="loading" [goals_section]="goals_section"></app-goals-section>
+<app-our-projects-section [loading]="loading" [projects]="projects"></app-our-projects-section>
+<app-testmonial-section [loading]="loading" [testmonials]="testimonials"></app-testmonial-section>
 <app-request-consultation-section></app-request-consultation-section>
-<app-swiper [swipers]="partners"></app-swiper>
+<app-swiper [loading]="loading" [swipers]="partners"></app-swiper>
 <app-scroll-to-top-btn></app-scroll-to-top-btn>

@@ -1,0 +1,48 @@
+@keyframes fadeInOut {
+  0% {
+    background-color: #ccc;
+    transform: scale(0.98);
+    opacity: 0.8;
+  }
+  50% {
+    background-color: #ddd;
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    background-color: #ccc;
+    transform: scale(0.98);
+    opacity: 0.8;
+  }
+}
+
+.card-loader__anim {
+  animation-name: fadeInOut;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  transform-origin: center;
+  transition: all 0.3s ease;
+}
+
+.card-loader__text {
+  background-color: #ccc;
+  animation: shimmer 2s linear infinite;
+  background: linear-gradient(
+    to right,
+    #ccc 0%,
+    #ddd 20%,
+    #ccc 40%,
+    #ccc 100%
+  );
+  background-size: 1000px 100%;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}

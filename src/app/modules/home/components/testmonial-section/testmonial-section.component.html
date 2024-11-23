@@ -1,4 +1,12 @@
-<section *ngIf="testmonials" class="container my-5">
+<ng-container *ngIf="loading">
+    <div class="container py-5">
+        <div class="testmonial-container">
+        <app-custom-skelton width="100%" height="500px"></app-custom-skelton>
+        </div>
+    </div>
+</ng-container>
+
+<section *ngIf="testmonials" class="container py-5">
     <div class="testmonial-container d-flex justify-content-center align-items-center py-5">
         <p-carousel class="testmonial-section-carousel" dir="ltr" [value]="testmonials" [numVisible]="1" [numScroll]="1"
             [showIndicators]="false" [circular]="true">

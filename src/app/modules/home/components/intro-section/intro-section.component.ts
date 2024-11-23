@@ -9,5 +9,6 @@ import { AboutUsSection } from 'src/app/core/interfaces/home';
 export class IntroSectionComponent {
   @Input() about_us_section!: AboutUsSection;
   @Input() isBtn: boolean = false;
+  @Input() loading!: boolean;
 
 }

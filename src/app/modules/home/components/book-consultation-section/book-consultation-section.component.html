@@ -1,4 +1,6 @@
-<section *ngIf="home_booking_section" [style]="'background-image:url('+home_booking_section.background+')'" class="d-flex align-items-center pt-5">
+<app-custom-skelton *ngIf="loading" width="100%" height="500px"></app-custom-skelton>
+<section *ngIf="home_booking_section" [style]="'background-image:url('+home_booking_section.background+')'"
+    class="d-flex align-items-center pt-5">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 mb-4 d-flex align-items-center">
@@ -14,8 +16,9 @@
                         <a *ngIf="home_booking_section.button_url" [href]="home_booking_section.button_url">
                             <app-custom-btn [btnName]="home_booking_section.button_text"></app-custom-btn>
                         </a>
-                        <app-custom-btn *ngIf="!home_booking_section.button_url" routerLink="/contact-us" [btnName]="home_booking_section.button_text"></app-custom-btn>
-                        
+                        <app-custom-btn *ngIf="!home_booking_section.button_url" routerLink="/contact-us"
+                            [btnName]="home_booking_section.button_text"></app-custom-btn>
+
                     </div>
                 </div>
             </div>

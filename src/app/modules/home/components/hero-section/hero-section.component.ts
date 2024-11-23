@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Carousel } from 'primeng/carousel';
+import { Slider } from 'src/app/core/interfaces/home';
 
 @Component({
   selector: 'app-hero-section',
@@ -7,7 +8,8 @@ import { Carousel } from 'primeng/carousel';
   styleUrls: ['./hero-section.component.scss']
 })
 export class HeroSectionComponent {
-  @Input() carouselSection: any;
+  @Input() carouselSection!: Slider[];
+  @Input() loading!: boolean;
 
 
   constructor() {

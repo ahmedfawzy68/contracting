@@ -9,6 +9,7 @@ import { CoverComponent } from './components/cover/cover.component';
 import { IntroSectionComponent } from '../modules/home/components/intro-section/intro-section.component';
 import { CustomInputComponent } from './components/custom-input/custom-input.component';
 import { WhatsappBtnComponent } from './components/whatsapp-btn/whatsapp-btn.component';
+import { CustomSkeltonComponent } from './components/skeltons/custom-skelton/custom-skelton.component';
 
 
 
@@ -20,7 +21,8 @@ import { WhatsappBtnComponent } from './components/whatsapp-btn/whatsapp-btn.com
     IntroSectionComponent,
     CoverComponent,
     CustomInputComponent,
-    WhatsappBtnComponent
+    WhatsappBtnComponent,
+    CustomSkeltonComponent
   ],
   imports: [
     CommonModule,
@@ -34,7 +36,8 @@ import { WhatsappBtnComponent } from './components/whatsapp-btn/whatsapp-btn.com
     IntroSectionComponent,
     CoverComponent,
     CustomInputComponent,
-    WhatsappBtnComponent
+    WhatsappBtnComponent,
+    CustomSkeltonComponent
   ]
 })
 export class SharedModule { }

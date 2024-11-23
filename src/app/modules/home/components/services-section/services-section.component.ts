@@ -9,6 +9,7 @@ import { ServicesSection } from 'src/app/core/interfaces/home';
 })
 export class ServicesSectionComponent {
   @Input() services_section!: ServicesSection;
+  @Input() loading!: boolean;
 
   responsiveOptions = [
     {

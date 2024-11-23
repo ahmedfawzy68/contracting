@@ -8,6 +8,7 @@ import { WhyUsSection } from 'src/app/core/interfaces/home';
 })
 export class WhyUsSectionComponent {
   @Input() whyUsSection!: WhyUsSection;
+  @Input() loading!: boolean;
 
   whyUsData = [
     {

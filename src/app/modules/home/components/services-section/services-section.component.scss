@@ -15,11 +15,11 @@ section {
     }
     &:hover {
       background: center center/cover no-repeat;
-      &::after{
-        content: '';
+      &::after {
+        content: "";
         position: absolute;
         inset: 0;
-        background-color: rgba(0,0,0,0.5);
+        background-color: rgba(0, 0, 0, 0.5);
       }
       h5 {
         color: #fff;
@@ -52,4 +52,7 @@ section {
 }
 ::ng-deep .service-section-carousel .p-ripple {
   color: var(--secondary-color);
+}
+.skelton-box {
+  clip-path: polygon(20px 0, 100% 0, 100% 100%, 0 100%, 0 20px);
 }

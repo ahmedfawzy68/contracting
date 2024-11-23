@@ -8,5 +8,6 @@ import { HomeBookingSection } from 'src/app/core/interfaces/home';
 })
 export class BookConsultationSectionComponent {
   @Input() home_booking_section!: HomeBookingSection;
+  @Input() loading!: boolean;
 
 }

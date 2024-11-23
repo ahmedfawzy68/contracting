@@ -1,13 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { AboutUsSection, Goal, HomeBookingSection, Partner, ProjectsSection, ServicesSection, Slider, Testimonial, WhyUsSection } from 'src/app/core/interfaces/home';
 import { HomeService } from 'src/app/shared/services/home/home.service';
+import { LanguageService } from 'src/app/shared/services/language/language.service';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent implements OnInit, OnDestroy {
   sliders!: Slider[];
   about_us_section!: AboutUsSection;
   why_us_section!: WhyUsSection;
@@ -17,14 +19,20 @@ export class HomeComponent implements OnInit {
   projects!: ProjectsSection;
   testimonials!: Testimonial[];
   partners!: Partner[];
+  private langSub!: Subscription;
+  loading: boolean = true;
 
-  constructor(private _home: HomeService) { }
+  constructor(private _home: HomeService, private _lang: LanguageService) { }
 
   ngOnInit(): void {
-    this.homePage();
+    window.scrollTo(0, 0);
+    this.langSub = this._lang.language$.subscribe(lang => {
+      this.homePage();
+    })
   }
 
   homePage() {
+    this.loading = true;
     this._home.homePage().subscribe((res: any) => {
       if (res.status == 1) {
         this.sliders = res.data.sliders;
@@ -36,8 +44,13 @@ export class HomeComponent implements OnInit {
         this.projects = res.data.projects;
         this.testimonials = res.data.testimonials;
         this.partners = res.data.partners;
+        this.loading = false;
       }
     })
+  }
+
+  ngOnDestroy() {
+    this.langSub.unsubscribe();
   }
 
 }

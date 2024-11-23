@@ -10,6 +10,7 @@ import { Goal } from 'src/app/core/interfaces/home';
 export class GoalsSectionComponent {
 
   @Input() goals_section!: Goal[];
+  @Input() loading!: boolean;
   activeIndex = 0;
 
   onPageChange(event: any) {

@@ -9,6 +9,7 @@ import { Testimonial } from 'src/app/core/interfaces/home';
 export class TestmonialSectionComponent {
 
   @Input() testmonials!: Testimonial[];
+  @Input() loading!: boolean;
 
 
 }
