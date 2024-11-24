@@ -1,4 +1,5 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { trigger, style, animate, transition } from '@angular/animations';
 
 @Component({
@@ -20,12 +21,18 @@ import { trigger, style, animate, transition } from '@angular/animations';
 export class ScrollToTopBtnComponent {
   isVisible = false;
 
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) { }
+
   @HostListener('window:scroll')
   checkScroll() {
-    this.isVisible = window.scrollY > 200;
+    if (isPlatformBrowser(this.platformId)) {
+      this.isVisible = window.scrollY > 200;
+    }
   }
 
   scrollToTop() {
-    window.scrollTo(0, 0);
+    if (isPlatformBrowser(this.platformId)) {
+      window.scrollTo(0, 0);
+    }
   }
 }
