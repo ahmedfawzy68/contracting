@@ -1,4 +1,22 @@
-<section>
+<div *ngIf="loading" class="container loading">
+    <div class="d-flex align-items-center justify-content-between flex-wrap mb-5">
+        <div>
+            <div class="mb-5">
+                <app-custom-skelton width="225px" height="25px"></app-custom-skelton>
+            </div>
+            <app-custom-skelton width="240px" height="50px"></app-custom-skelton>
+        </div>
+        <div>
+            <app-custom-skelton width="700px" height="90px"></app-custom-skelton>
+        </div>
+    </div>
+    <div class="row">
+        <div *ngFor="let _ of [1,2,3]" class="col-lg-4 col-md-6">
+            <app-custom-skelton width="100%" height="520px"></app-custom-skelton>
+        </div>
+    </div>
+</div>
+<section *ngIf="!loading">
     <div class="container">
         <header class="d-flex align-items-center justify-content-between flex-wrap mb-5">
             <div class="mb-3">

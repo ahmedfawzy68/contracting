@@ -1,18 +1,16 @@
-<section class="d-flex align-items-center py-5">
+<app-custom-skelton *ngIf="loading" width="100%" height="740px"></app-custom-skelton>
+<section *ngIf="!loading" [ngStyle]="{'background-image': 'url('+whyUs?.background+')'}" class="d-flex align-items-center py-5">
     <div class="container">
         <div class="row d-flex align-items-center">
             <div class="col-lg-6 mb-4">
-                <img src="assets/imgs/building.png" width="100%" alt="building">
+                <img [src]="whyUs?.image" width="100%" [alt]="whyUs?.title">
             </div>
             <div class="col-lg-6 mb-4">
                 <div class="content text-white">
                     <h2 [class]="(('dir'|translate) == 'ltr')? 'text-lg-start': 'text-lg-end'" class="text-center">
-                        {{"about.why-qemmet-alrawasi"|translate}}</h2>
-                    <p class="my-5">هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد
-                        النص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد
-                        الحروف التى يولدها التطبيق. إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص العربى زيادة
-                        عدد الف</p>
-                    <app-custom-btn [btnName]="'navbar.contact-us'|translate"></app-custom-btn>
+                        {{whyUs?.title}}</h2>
+                        <p class="my-5">{{whyUs?.description}}</p>
+                    <app-custom-btn routerLink="/contact-us" [btnName]="'navbar.contact-us'|translate"></app-custom-btn>
                 </div>
             </div>
         </div>

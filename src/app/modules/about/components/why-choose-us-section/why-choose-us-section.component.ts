@@ -9,6 +9,7 @@ import { AboutUsData } from 'src/app/core/interfaces/about';
 export class WhyChooseUsSectionComponent {
 
   @Input() whyUs!: AboutUsData['data']['why_choose_us_section'] | null;
+  @Input() loading!: boolean;
 
   whyUsCards = [
     {
