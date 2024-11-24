@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { AboutUsData } from 'src/app/core/interfaces/about';
 
 @Component({
   selector: 'app-why-choose-us-section',
@@ -6,6 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./why-choose-us-section.component.scss']
 })
 export class WhyChooseUsSectionComponent {
+
+  @Input() whyUs!: AboutUsData['data']['why_choose_us_section'] | null;
 
   whyUsCards = [
     {

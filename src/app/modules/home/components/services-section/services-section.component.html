@@ -28,7 +28,7 @@
                 </div>
             </div>
         </ng-container>
-        <ng-container *ngIf="services_section">
+        <ng-container *ngIf="services_section &&!loading">
             <div class="text-center mb-5">
                 <div class="slug">{{services_section.slug}}</div>
                 <div class="slug-title">{{services_section.title}}</div>

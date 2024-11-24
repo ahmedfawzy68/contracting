@@ -1,5 +1,5 @@
 <app-custom-skelton *ngIf="loading" width="100%" height="700px"></app-custom-skelton>
-<section *ngIf="goals_section">
+<section *ngIf="goals_section &&!loading">
     <p-carousel dir="ltr" [value]="goals_section" [numVisible]="1" [numScroll]="1" [circular]="true"
         [showNavigators]="false" [page]="activeIndex" (onPageChange)="onPageChange($event)" [showIndicators]="false">
         <ng-template let-slide pTemplate="item">

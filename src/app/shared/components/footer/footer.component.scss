@@ -1,5 +1,4 @@
 footer {
-  background-image: url(../../../../assets/imgs/building11.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -8,14 +7,14 @@ footer {
   clip-path: ellipse(100% 95% at 50% 100%);
   padding-top: 150px;
   position: relative;
-  &:after{
+  &:after {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.5);
   }
   h4 {
     font-size: 25px;
@@ -63,7 +62,12 @@ footer {
     }
     .whatsapp {
       &:before {
-        content: "\f879";
+        [dir="rtl"] & {
+          content: "\f879";
+        }
+        [dir="ltr"] & {
+          content: "\f095";
+        }
       }
     }
     .email {
@@ -72,16 +76,20 @@ footer {
       }
     }
   }
-  .copy-rights{
+  .copy-rights {
     background-color: var(--primary-color);
-    p{
-        font-size: 14px;
+    p {
+      font-size: 14px;
     }
-    i{
-        color: white;
-        font-size: 18px;
+    i {
+      color: white;
+      font-size: 18px;
     }
   }
+}
+
+.pointer {
+  cursor: pointer;
 }
 
 @media screen and (max-width: 991px) {
@@ -90,7 +98,11 @@ footer {
     padding-top: 100px;
   }
 }
-.row , .copy-rights{
+.row,
+.copy-rights {
   position: relative;
   z-index: 2;
+}
+.loading{
+  clip-path: ellipse(100% 95% at 50% 100%);
 }

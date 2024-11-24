@@ -29,9 +29,9 @@ export interface AboutUsSection {
     slug: string;
     title: string;
     image: string;
-    btn_text: string;
+    btn_text?: string;
     description: string;
-    btn_url: string | null;
+    btn_url?: string | null;
 }
 
 export interface WhyUsSection {

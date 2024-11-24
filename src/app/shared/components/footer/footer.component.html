@@ -1,47 +1,44 @@
-<footer class=" text-white">
+<div *ngIf="loading" class="loading">
+    <app-custom-skelton width="100%" height="528px"></app-custom-skelton>
+</div>
+<footer *ngIf="settings && !loading" [ngStyle]="{'background-image': 'url(' + settings.background + ')'}" class="text-white">
     <div class="container">
         <div class="row">
             <div class="col-lg-3 col-md-6 mb-4">
-                <h4 class="mb-4">قمة الرواسي للمقاولات</h4>
-                <p>هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص العربى، حيث
-                    يمكنك أن تولد مثل هذا النص أو العديد من النصوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها
-                    التطبيق. إذا كنت تحتاج إلى عدد أكبر من الفقرات يتيح لك مولد النص العربى زيادة عدد الف</p>
+                <h4 class="mb-4">{{settings.footer_title}}</h4>
+                <p>{{settings.footer_description}}</p>
             </div>
             <div class="col-lg-3 col-md-6 mb-4">
-                <h4 class="mb-4">روابط سريعة</h4>
+                <h4 class="mb-4">{{'footer.fast-links'|translate}}</h4>
                 <ul class="p-0">
-                    <li>{{'navbar.about-us'|translate}}</li>
-                    <li>{{'navbar.portfolio'|translate}}</li>
-                    <li>{{'navbar.services'|translate}}</li>
-                    <li>{{'navbar.contact-us'|translate}}</li>
+                    <li class="pointer" *ngFor="let link of links" [routerLink]="link.url">{{link.name|translate}}</li>
                 </ul>
             </div>
             <div class="col-lg-3 col-md-6 mb-4">
                 <h4 class="mb-4">{{'navbar.services'|translate}}</h4>
                 <ul class="p-0">
-                    <li>بناء المباني السكنية والتجارية</li>
-                    <li>إنشاء البنية التحتية</li>
-                    <li>تطوير المشاريع العقارية</li>
-                    <li>تجديد وترميم المباني</li>
-                    <li>إنشاء المنشآت الصناعية</li>
-                    <li>إدارة المشاريع</li>
+                    <li *ngFor="let service of settings.footer_services">{{service}}</li>
                 </ul>
             </div>
             <div class="col-lg-3 col-md-6 mb-4">
                 <h4 class="mb-4">{{'navbar.contact-us'|translate}}</h4>
                 <ul class="p-0">
-                    <li dir="ltr" class="whatsapp">+966999999999</li>
-                    <li class="email">qemmetalrawasi&#64;gmail.com</li>
+                    <li dir="ltr" class="whatsapp">{{settings.mobile}}</li>
+                    <li class="email">{{settings.email}}</li>
                 </ul>
             </div>
         </div>
     </div>
-    <div class="copy-rights d-flex justify-content-around text-white align-items-center flex-wrap">
-        <p class="my-3">جميع الحقوق محفوظة شركة قمة الرواسي للمقاولات ٢٠٢٤ </p>
-        <div class="d-flex gap-4 align-items-center my-3">
-            <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+    <div class="copy-rights d-flex justify-content-around text-white align-items-center">
+        <p class="my-3">{{'footer.copy-right'|translate}}</p>
+        <div *ngIf="settings?.instagram || settings?.facebook || settings?.twitter || settings?.tiktok || settings?.snapchat || settings?.linkedin"
+            class="d-flex gap-4 align-items-center my-3">
+            <a *ngIf="settings.facebook" [href]="settings.facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a *ngIf="settings.instagram" [href]="settings.instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a *ngIf="settings.twitter" [href]="settings.twitter" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+            <a *ngIf="settings.tiktok" [href]="settings.tiktok" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+            <a *ngIf="settings.linkedin" [href]="settings.linkedin" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a *ngIf="settings.snapchat" [href]="settings.snapchat" target="_blank"><i class="fa-brands fa-snapchat"></i></a>
         </div>
     </div>
 </footer>

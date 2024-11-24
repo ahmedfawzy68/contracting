@@ -17,7 +17,7 @@
     </ng-container>
 
     <ng-template #content>
-        <div *ngIf="whyUsSection" class="text-center">
+        <div *ngIf="whyUsSection &&!loading" class="text-center">
             <header>
                 <div class="slug">{{whyUsSection.slug}}</div>
                 <div class="slug-title">{{whyUsSection.title}}</div>

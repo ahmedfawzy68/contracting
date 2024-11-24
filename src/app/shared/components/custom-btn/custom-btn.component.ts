@@ -6,7 +6,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./custom-btn.component.scss']
 })
 export class CustomBtnComponent {
-  @Input() btnName: string = '';
+  @Input() btnName!: string | undefined;
   @Input() backgroundColor: string = '#5772e8';
 
 }

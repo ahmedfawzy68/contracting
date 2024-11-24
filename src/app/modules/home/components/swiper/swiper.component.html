@@ -14,7 +14,7 @@
                     </swiper-container>
                 </div>
             </ng-container>
-            <swiper-container dir="ltr" [pagination]="false" [navigation]="false" [loop]="true"
+            <swiper-container *ngIf="!loading" dir="ltr" [pagination]="false" [navigation]="false" [loop]="true"
                 [breakpoints]="breakpoints">
                 <swiper-slide *ngFor="let swiper of swipers">
                     <img [src]="swiper.image" width="200" alt="swiper">

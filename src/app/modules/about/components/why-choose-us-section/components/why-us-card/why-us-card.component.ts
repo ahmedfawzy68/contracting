@@ -11,6 +11,5 @@ export class WhyUsCardComponent {
   @Input() icon: string = '';
   @Input() overLayerColor: string = '';
   @Input() backgroundImage: string = '';
-  @Input() color: string = '';
 
 }
