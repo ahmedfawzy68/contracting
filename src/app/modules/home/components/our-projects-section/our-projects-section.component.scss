@@ -1,15 +1,9 @@
 .project-card-wrapper {
-  perspective: 1000px;
   .project-card {
     position: relative;
     width: 100%;
     height: 350px;
-    transform-style: preserve-3d;
-    transition: transform 0.6s;
     border-radius: 10px;
-    &:hover {
-      transform: rotateY(180deg);
-    }
     span {
       z-index: 3;
     }
@@ -24,8 +18,7 @@
       z-index: 2;
       border-radius: inherit;
     }
-    .card-front,
-    .card-back {
+    .card-front {
       position: absolute;
       top: 0;
       left: 0;
@@ -38,11 +31,6 @@
       background: center center/cover no-repeat;
       color: #fff;
       font-size: 23px;
-    }
-    .card-back {
-      background-color: var(--primary-color);
-      color: #fff;
-      transform: rotateY(180deg);
     }
   }
 }
