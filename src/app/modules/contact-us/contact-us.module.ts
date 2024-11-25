@@ -7,6 +7,9 @@ import { SharedModule } from 'src/app/shared/shared.module';
 import { TranslateModule } from '@ngx-translate/core';
 import { MapComponent } from './components/map/map.component';
 import { ContactUsFormComponent } from './components/contact-us-form/contact-us-form.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ToastModule } from 'primeng/toast';
+
 
 
 @NgModule({
@@ -18,8 +21,10 @@ import { ContactUsFormComponent } from './components/contact-us-form/contact-us-
   imports: [
     CommonModule,
     ContactUsRoutingModule,
+    ReactiveFormsModule,
     SharedModule,
-    TranslateModule
+    TranslateModule,
+    ToastModule
   ]
 })
 export class ContactUsModule { }

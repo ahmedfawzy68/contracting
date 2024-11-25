@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Services } from 'src/app/core/interfaces/services';
 
 @Component({
   selector: 'app-offers',
@@ -7,31 +8,8 @@ import { Component } from '@angular/core';
 })
 export class OffersComponent {
 
-  servicesCards = [
-    {
-      title: 'بناء المباني السكنية والتجارية',
-      image: 'assets/imgs/building6.jpg'
-    },
-    {
-      title: 'إدارة المشاريع ',
-      image: 'assets/imgs/about.jpg'
-    },
-    {
-      title: 'تجديد وترميم المباني',
-      image: 'assets/imgs/building8.jpg'
-    },
-    {
-      title: 'إنشاء المنشآت الصناعية',
-      image: 'assets/imgs/building5.jpg'
-    },
-    {
-      title: 'إنشاء البنية التحتية',
-      image: 'assets/imgs/building7.jpg'
-    },
-    {
-      title: 'تطوير المشاريع العقارية',
-      image: 'assets/imgs/building1.jpg'
-    },
-  ]
+  @Input() servicesSection!: Services['data']['services_section'] | null;
+  @Input() loading!: boolean;
+
 
 }

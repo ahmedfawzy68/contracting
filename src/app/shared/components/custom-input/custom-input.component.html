@@ -1,7 +1,10 @@
 <label class="form-label">{{label}}</label>
 <ng-container [ngSwitch]="isInput">
-    <input *ngSwitchCase="true" [type]="type" class="form-control" [required]="isRequired"
+    <input *ngSwitchCase="true" [type]="type" class="form-control" [required]="isRequired" [disabled]="disabled"
+        [value]="value" (input)="onChange($any($event.target).value)" (blur)="onTouched()"
         [placeholder]="('contact-us.enter'|translate) + ' ' + label">
-    <textarea rows="10" *ngSwitchCase="false" class="form-control" [required]="isRequired"
+
+    <textarea *ngSwitchCase="false" rows="10" class="form-control" [required]="isRequired" [disabled]="disabled"
+        [value]="value" (input)="onChange($any($event.target).value)" (blur)="onTouched()"
         [placeholder]="('contact-us.enter'|translate) + ' ' + label"></textarea>
 </ng-container>

@@ -1,6 +1,8 @@
 <button [ngStyle]="{'--dynamic-bg-color': backgroundColor}">
-    <span>
-        <i [class]="(('dir'|translate) == 'ltr')?'me-2 fa-arrow-right-long':'ms-2 fa-arrow-left-long'"
-            class="fa-solid"></i>{{btnName}}
+    <span [ngClass]="{'spinner-border spinner-border-sm': loading}">
+        <ng-container *ngIf="!loading">
+            <i [class]="(('dir'|translate) == 'ltr')?'me-2 fa-arrow-right-long':'ms-2 fa-arrow-left-long'"
+                class="fa-solid"></i>{{btnName}}
+        </ng-container>
     </span>
 </button>

@@ -18,7 +18,7 @@ section {
         color: var(--secondary-color);
       }
     }
-    .social-media{
+    .social-media {
       i {
         font-size: 20px;
         color: var(--primary-color);
@@ -37,4 +37,16 @@ section {
       padding: 30px;
     }
   }
+}
+button {
+  border: 0;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+.profile-btn {
+  background-color: var(--primary-color);
+}
+.careers-btn {
+  background-color: var(--forth-color);
 }

@@ -8,5 +8,6 @@ import { Component, Input } from '@angular/core';
 export class CustomBtnComponent {
   @Input() btnName!: string | undefined;
   @Input() backgroundColor: string = '#5772e8';
+  @Input() loading!: boolean;
 
 }

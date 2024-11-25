@@ -1,42 +1,51 @@
 {
   "dir": "ltr",
-
   "navbar": {
     "home": "Home",
     "about-us": "About Us",
-    "portfolio": "Portfolio",
+    "portfolio": "Our Work",
     "services": "Services",
     "contact-us": "Contact Us"
   },
   "home": {
-    "company-name": "Al Rawasi Contracting",
+    "company-name": "Al-Rawasi Contracting",
     "why-us": "Why Choose Us",
-    "services-title": "Qemmet Al Rawasi General Contracting Company Offers a Comprehensive Range of Services",
-    "our-works": "Our Works",
-    "our-works-title": "Qemmet Al Rawasi General Contracting Company Has Executed a Variety of Projects",
+    "services-title": "Qemmet Al-Rawasi General Contracting offers a comprehensive range of services",
+    "our-works": "Our Work",
+    "our-works-title": "Qemmet Al-Rawasi General Contracting has completed a variety of projects",
     "request-consultation": "Request a Free Consultation Now",
     "success-partners": "Success Partners"
   },
   "about": {
-    "why-qemmet-alrawasi": "Why Al Rawasi Contracting"
+    "why-qemmet-alrawasi": "Why Qemmet Al-Rawasi Contracting"
   },
   "services": {
     "offers": "What We Offer"
   },
   "contact-us": {
-    "form-title": "We’re happy to hear from you and will help you achieve your goal as quickly as possible.",
+    "form-title": "We are happy to hear from you and will help you achieve your goals as quickly as possible.",
     "enter": "Enter",
-    "name": "First Name",
-    "last-name": "Last Name",
+    "first_name": "First Name",
+    "last_name": "Last Name",
     "email": "Email",
     "subject": "Subject",
     "message": "Message",
     "send": "Send",
     "main-branch": "Main Branch",
-    "other-branches": "Other Branches"
+    "other-branches": "Other Branches",
+    "profile": "Company Profile",
+    "careers": "Careers",
+    "join": "Join Us",
+    "supplier-join": "Join as a Supplier"
   },
   "footer": {
     "fast-links": "Quick Links",
-    "copy-right": "All rights reserved to Qemmet Al Rawasi Contracting Company 2024"
+    "copy-right": "All Rights Reserved Qemmet Al-Rawasi General Contracting 2024"
+  },
+  "ERROR": "Error",
+  "SUCCESS": "Success",
+  "VALIDATION": {
+    "REQUIRED": "Required",
+    "EMAIL": "Invalid Email Address"
   }
 }

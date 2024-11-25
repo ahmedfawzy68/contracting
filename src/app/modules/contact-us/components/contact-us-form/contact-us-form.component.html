@@ -1,15 +1,18 @@
+<p-toast dir="ltr"></p-toast>
 <section class="container pb-5">
     <div class="row">
         <div class="col-lg-8 mb-lg-0 mb-4">
             <div class="bg-white h-100 form-box">
                 <div class="slug">{{'navbar.contact-us'|translate}}</div>
                 <div class="slug-title">{{'contact-us.form-title'|translate}}</div>
-                <form class="mt-5">
+                <form [formGroup]="contactForm" class="mt-5">
                     <div class="row">
                         <app-custom-input *ngFor="let form of formList" [class]="form.isInput? 'col-md-6' : 'col-md-12'"
                             class="mb-4" [isInput]="form.isInput" [isRequired]="form.requierd"
-                            [label]="form.label|translate" [type]="form.type"></app-custom-input>
-                        <app-custom-btn [btnName]="'contact-us.send'|translate"></app-custom-btn>
+                            [label]="form.label|translate" [type]="form.type"
+                            [formControlName]="form.formControlName"></app-custom-input>
+                        <app-custom-btn (click)="submit(contactForm)"
+                            [btnName]="'contact-us.send'|translate" [loading]="loading"></app-custom-btn>
                     </div>
                 </form>
             </div>
@@ -36,10 +39,36 @@
                 </p>
                 <p><i [class]="('dir'|translate)=='rtl'?'ms-2':'me-2'" class="fa-solid fa-envelope-open-text"></i>
                     www.qemmetalrawasi.co</p>
-                <div class="d-flex gap-4 social-media mt-5">
-                    <a href="#" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#" target="_blank"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+
+                <div *ngIf="settings?.careers_pdf || settings?.profile_pdf"
+                    class="d-flex align-items-center gap-3 flex-wrap mt-5">
+                    <a *ngIf="settings?.profile_pdf" target="_blank" [href]="settings.profile_pdf"><button
+                            class="profile-btn">{{'contact-us.profile'|translate}}</button></a>
+                    <a *ngIf="settings?.careers_pdf" target="_blank" [href]="settings.careers_pdf"><button
+                            class="careers-btn">{{'contact-us.careers'|translate}}</button></a>
+                </div>
+
+                <div *ngIf="settings" class="join-us mt-5">
+                    <h3 class="mb-4">{{'contact-us.join'|translate}}</h3>
+                    <div class="d-flex align-items-center gap-4 justify-content-between flex-wrap">
+                        <a *ngIf="settings?.supplier_join_url" [href]="settings.supplier_join_url"
+                            target="_blank"><app-custom-btn
+                                btnName="{{'contact-us.supplier-join'|translate}}"></app-custom-btn></a>
+                        <div *ngIf="settings" class="d-flex gap-4 social-media">
+                            <a *ngIf="settings.facebook" [href]="settings.facebook" target="_blank"><i
+                                    class="fab fa-facebook-f"></i></a>
+                            <a *ngIf="settings.instagram" [href]="settings.instagram" target="_blank"><i
+                                    class="fab fa-instagram"></i></a>
+                            <a *ngIf="settings.twitter" [href]="settings.twitter" target="_blank"><i
+                                    class="fa-brands fa-x-twitter"></i></a>
+                            <a *ngIf="settings.tiktok" [href]="settings.tiktok" target="_blank"><i
+                                    class="fa-brands fa-tiktok"></i></a>
+                            <a *ngIf="settings.linkedin" [href]="settings.linkedin" target="_blank"><i
+                                    class="fa-brands fa-linkedin-in"></i></a>
+                            <a *ngIf="settings.snapchat" [href]="settings.snapchat" target="_blank"><i
+                                    class="fa-brands fa-snapchat"></i></a>
+                        </div>
+                    </div>
                 </div>
 
             </div>

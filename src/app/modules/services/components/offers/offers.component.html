@@ -1,15 +1,29 @@
 <section class="container">
-    <div class="text-center pb-5">
-        <div class="slug">
-            {{'services.offers'|translate}}
+    <ng-container *ngIf="loading">
+        <div class="mb-3">
+            <app-custom-skelton width="200px" height="50px" center="mx-auto"></app-custom-skelton>
         </div>
-        <div class="slug-title">
-            {{'navbar.services'|translate}}
+        <app-custom-skelton width="70%" height="60px" center="mx-auto"></app-custom-skelton>
+        <div class="row mt-5">
+            <div *ngFor="let _ of [1,2,3,4,5,6]" class="col-lg-4 col-md-6 mb-4 loading">
+                <app-custom-skelton width="100%" height="315px"></app-custom-skelton>
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <div *ngFor="let card of servicesCards" class="col-lg-4 col-md-6 mb-4">
-            <app-services-card [title]="card.title" [image]="card.image"></app-services-card>
+    </ng-container>
+
+    <ng-container *ngIf="!loading">
+        <div class="text-center pb-5">
+            <div class="slug">
+                {{servicesSection?.slug}}
+            </div>
+            <div class="slug-title">
+                {{servicesSection?.title}}
+            </div>
         </div>
-    </div>
+        <div class="row">
+            <div *ngFor="let card of servicesSection?.items" class="col-lg-4 col-md-6 mb-4">
+                <app-services-card [title]="card.title" [image]="card.image_path"></app-services-card>
+            </div>
+        </div>
+    </ng-container>
 </section>
