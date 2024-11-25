@@ -9,7 +9,6 @@ import { register } from 'swiper/element/bundle';
 })
 export class SwiperComponent implements AfterViewInit {
   @Input() swipers!: Partner[];
-  @Input() loading!: boolean;
   
   breakpoints = {
     1024: { slidesPerView: 4, spaceBetween: 30 },

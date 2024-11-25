@@ -63,11 +63,11 @@
 
 :host-context([dir="ltr"]) {
   ::ng-deep .testmonial-section-carousel .p-carousel-prev {
-    left: 90%;
+    right: 10%;
   }
 
   ::ng-deep .testmonial-section-carousel .p-carousel-next {
-    right: 10%;
+    left: 90%;
   }
 }
 @media screen and (max-width: 767px) {

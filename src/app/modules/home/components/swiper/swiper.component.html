@@ -4,7 +4,7 @@
             <div class="slug pb-5">
                 {{'home.success-partners' | translate}}
             </div>
-            <ng-container *ngIf="loading">
+            <ng-container *ngIf="!swipers">
                 <div class="row">
                     <swiper-container dir="ltr" [pagination]="false" [navigation]="false" [loop]="true"
                         [breakpoints]="breakpoints">
@@ -14,7 +14,7 @@
                     </swiper-container>
                 </div>
             </ng-container>
-            <swiper-container *ngIf="!loading" dir="ltr" [pagination]="false" [navigation]="false" [loop]="true"
+            <swiper-container dir="ltr" [pagination]="false" [navigation]="false" [loop]="true"
                 [breakpoints]="breakpoints">
                 <swiper-slide *ngFor="let swiper of swipers">
                     <img [src]="swiper.image" width="200" alt="swiper">
