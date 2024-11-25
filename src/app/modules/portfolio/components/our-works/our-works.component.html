@@ -1,11 +1,28 @@
 <section class="text-center py-5 container">
-    <div class="slug">الآعمال الخارجية</div>
-    <div class="slug-title">شركة قمة الرواسي في مجال المقاولات العامة قد تقوم بتنفيذ العديد من الأعمال المتنوعة</div>
-    <div class="row mt-5">
-        <div *ngFor="let _ of [1,2,3,4,5,6,7,8,9,10,11,12]" class="col-lg-3 col-md-6 mb-4">
-            <div class="img-container">
-                <img [src]="'assets/imgs/building'+_+'.jpg'" width="100%" [alt]="'project'+_">
+    <ng-container *ngIf="loading" class="loading">
+        <div *ngFor="let _ of [1,2,3,4]" class="mb-4">
+            <div class="mb-4">
+                <app-custom-skelton width="250px" height="60px" center="mx-auto"></app-custom-skelton>
+            </div>
+            <app-custom-skelton width="70%" height="50px" center="mx-auto"></app-custom-skelton>
+            <div class="row mt-5">
+                <div *ngFor="let _ of [1,2,3,4,5,6,7,8]" class="col-lg-3 col-md-6 mb-4">
+                    <app-custom-skelton width="100%" height="320px"></app-custom-skelton>
+                </div>
             </div>
         </div>
-    </div>
+    </ng-container>
+    <ng-container *ngIf="!loading" class="mb-4">
+        <div *ngFor="let project of projectsCategory">
+            <div class="slug">{{project.slug}}</div>
+            <div class="slug-title">{{project.name}}</div>
+            <div class="row mt-5 d-flex justify-content-center">
+                <div *ngFor="let singleProject of project.projects" class="col-lg-3 col-md-6 mb-4">
+                    <div class="img-container">
+                        <img [src]="singleProject.image" width="100%" [alt]="'project '+singleProject.id">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ng-container>
 </section>
