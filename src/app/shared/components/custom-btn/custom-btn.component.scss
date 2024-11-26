@@ -29,4 +29,10 @@ button {
   &:hover {
     color: #fff;
   }
+  &:focus-visible{
+    outline: unset;
+    background-color: var(--secondary-color);
+    color: #fff;
+    border-radius: 5px;
+  }
 }
