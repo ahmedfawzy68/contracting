@@ -29,6 +29,12 @@ export class ServicesSectionComponent {
     }
   ]
 
+  ngOnChanges(): void {
+    this.services_section?.items.forEach(service => {
+      this.preloadImage(service.background);
+    });
+  }
+
   constructor() {
     this.carouselTouch();
   }
@@ -43,6 +49,11 @@ export class ServicesSectionComponent {
 
   onLeave(service: any) {
     service.hoverStyle = {}
+  }
+
+  preloadImage(imageUrl: string): void {
+    const img = new Image();
+    img.src = imageUrl;
   }
 
 }
