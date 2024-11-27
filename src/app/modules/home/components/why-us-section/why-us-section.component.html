@@ -1,41 +1,49 @@
-<section class="mb-4 container">
-    <ng-container *ngIf="loading; else content">
-        <div class="loading">
-            <app-custom-skelton center="mx-auto" width="110px" height="20px"></app-custom-skelton>
-            <div class="mt-4">
-                <app-custom-skelton center="mx-auto" width="50%" height="30px"></app-custom-skelton>
-            </div>
-            <div class="row align-items-center mt-5">
-                <div class="col-lg-4 mb-4" *ngFor="let i of [1,2,3]">
-                    <app-custom-skelton width="100%" height="288px"></app-custom-skelton>
-                    <div class="mt-4" *ngIf="i !== 2">
+<section *ngIf="whyUsSection" class="mb-4">
+    <ng-container *ngIf="loading">
+        <div class="container">
+            <div class="loading">
+                <app-custom-skelton center="mx-auto" width="110px" height="20px"></app-custom-skelton>
+                <div class="mt-4">
+                    <app-custom-skelton center="mx-auto" width="50%" height="30px"></app-custom-skelton>
+                </div>
+                <div class="row align-items-center mt-5">
+                    <div class="col-lg-4 mb-4" *ngFor="let i of [1,2,3]">
                         <app-custom-skelton width="100%" height="288px"></app-custom-skelton>
+                        <div class="mt-4" *ngIf="i !== 2">
+                            <app-custom-skelton width="100%" height="288px"></app-custom-skelton>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </ng-container>
-
-    <ng-template #content>
-        <div *ngIf="whyUsSection &&!loading" class="text-center">
-            <header>
-                <div class="slug">{{whyUsSection.slug}}</div>
-                <div class="slug-title">{{whyUsSection.title}}</div>
-            </header>
-            <div class="row align-items-center mt-5">
-                <div class="col-lg-4 mb-4" *ngFor="let items of [whyUsSection.items.slice(0,2), [], whyUsSection.items.slice(2,4)]; let i = index">
-                    <ng-container *ngIf="i === 1; else whyUsBoxes">
-                        <img [src]="whyUsSection.image" class="w-100" [alt]="whyUsSection.title">
-                    </ng-container>
-                    <ng-template #whyUsBoxes>
-                        <div class="why-us-box mb-4" *ngFor="let item of items">
-                            <img [src]="item.icon" width="50" [alt]="item.title">
-                            <h2 class="my-4">{{item.title}}</h2>
-                            <p>{{item.description}}</p>
-                        </div>
-                    </ng-template>
+    <div *ngIf="!loading" class="container text-center">
+        <header>
+            <div class="slug">
+                {{whyUsSection.slug}}
+            </div>
+            <div class="slug-title">
+                {{whyUsSection.title}}
+            </div>
+        </header>
+        <div class="row align-items-center mt-5">
+            <div class="col-lg-4 mb-4">
+                <div class="why-us-box mb-4" *ngFor="let item of whyUsSection.items.slice(0,2)">
+                    <img [src]="item.icon" width="50" [alt]="item.title">
+                    <h2 class="my-4">{{item.title}}</h2>
+                    <p>{{item.description}}</p>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <img [src]="whyUsSection.image" width="100%" alt="logo">
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="why-us-box mb-4" *ngFor="let item of whyUsSection.items.slice(2,4)">
+                    <img [src]="item.icon" width="50" [alt]="item.title">
+                    <h2 class="my-4">{{item.title}}</h2>
+                    <p>{{item.description}}</p>
                 </div>
             </div>
         </div>
-    </ng-template>
+    </div>
 </section>
