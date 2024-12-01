@@ -1,7 +1,8 @@
 <div *ngIf="loading" class="loading">
     <app-custom-skelton width="100%" height="528px"></app-custom-skelton>
 </div>
-<footer *ngIf="settings && !loading" [ngStyle]="{'background-image': 'url(' + settings.background + ')'}" class="text-white">
+<footer *ngIf="settings && !loading" [ngStyle]="{'background-image': 'url(' + settings.background + ')'}"
+    class="text-white">
     <div class="container">
         <div class="row">
             <div class="col-lg-3 col-md-6 mb-4">
@@ -29,16 +30,26 @@
             </div>
         </div>
     </div>
-    <div class="copy-rights d-flex justify-content-around text-white align-items-center flex-wrap gap-4">
-        <p class="my-3">{{'footer.copy-right'|translate}}</p>
+    <div class="copy-rights d-flex justify-content-around text-white align-items-center flex-wrap gap-2 text-center">
+        <p *ngIf="('dir'|translate)== 'rtl'" class="my-3">جميع الحقوق محفوظة © {{currentYear}} | تصميم شركة <a
+                href="https://api.whatsapp.com/send?phone=201093699388" target="_blank">Dot Com Smart Solutions</a>
+        </p>
+        <p *ngIf="('dir'|translate)== 'ltr'" class="my-3">All rights reserved © {{currentYear}} | Designed by <a
+                href="https://api.whatsapp.com/send?phone=201093699388" target="_blank">Dot Com Smart Solutions</a>
+        </p>
         <div *ngIf="settings?.instagram || settings?.facebook || settings?.twitter || settings?.tiktok || settings?.snapchat || settings?.linkedin"
             class="d-flex gap-4 align-items-center my-3">
-            <a *ngIf="settings.facebook" [href]="settings.facebook" target="_blank"><i class="fab fa-facebook-f"></i></a>
-            <a *ngIf="settings.instagram" [href]="settings.instagram" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a *ngIf="settings.twitter" [href]="settings.twitter" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+            <a *ngIf="settings.facebook" [href]="settings.facebook" target="_blank"><i
+                    class="fab fa-facebook-f"></i></a>
+            <a *ngIf="settings.instagram" [href]="settings.instagram" target="_blank"><i
+                    class="fab fa-instagram"></i></a>
+            <a *ngIf="settings.twitter" [href]="settings.twitter" target="_blank"><i
+                    class="fa-brands fa-x-twitter"></i></a>
             <a *ngIf="settings.tiktok" [href]="settings.tiktok" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
-            <a *ngIf="settings.linkedin" [href]="settings.linkedin" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a *ngIf="settings.snapchat" [href]="settings.snapchat" target="_blank"><i class="fa-brands fa-snapchat"></i></a>
+            <a *ngIf="settings.linkedin" [href]="settings.linkedin" target="_blank"><i
+                    class="fa-brands fa-linkedin-in"></i></a>
+            <a *ngIf="settings.snapchat" [href]="settings.snapchat" target="_blank"><i
+                    class="fa-brands fa-snapchat"></i></a>
         </div>
     </div>
 </footer>

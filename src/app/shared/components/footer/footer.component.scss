@@ -80,6 +80,10 @@ footer {
     background-color: var(--primary-color);
     p {
       font-size: 14px;
+      a {
+        color: white;
+        text-decoration: none;
+      }
     }
     i {
       color: white;
@@ -96,6 +100,17 @@ footer {
   footer {
     clip-path: unset;
     padding-top: 100px;
+    h4 {
+      font-size: 22px;
+    }
+    p {
+      font-size: 15px;
+    }
+    ul{
+      li{
+        font-size: 15px;
+      }
+    }
   }
 }
 .row,
@@ -103,6 +118,6 @@ footer {
   position: relative;
   z-index: 2;
 }
-.loading{
+.loading {
   clip-path: ellipse(100% 95% at 50% 100%);
 }

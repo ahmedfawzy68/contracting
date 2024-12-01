@@ -7,7 +7,7 @@ section {
   background-attachment: fixed;
   border-radius: 100px 0px 100px 0px;
   position: relative;
-  &::after{
+  &::after {
     content: "";
     position: absolute;
     top: 0;
@@ -24,5 +24,15 @@ section {
   }
   ::ng-deep button {
     color: #fff;
+  }
+}
+@media screen and (max-width: 767px) {
+  section {
+    height: 300px;
+    border-radius: unset;
+    background-attachment: scroll;
+    h2 {
+      font-size: 30px;
+    }
   }
 }

@@ -22,5 +22,15 @@ export interface Settings {
         profile_pdf: string;
         careers_pdf: string;
         supplier_join_url: string;
+        main_branch : {
+            address: string;
+            email: string;
+            mobile: string;
+        };
+        second_branch:{
+            address: string;
+            email: string;
+            mobile: string;
+        }
     };
 }

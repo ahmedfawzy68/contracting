@@ -54,6 +54,13 @@ section {
   transition: all 300ms ease-in-out;
 }
 
+.desc{
+  font-size: 18px;
+  color: #fff;
+  z-index: 2;
+  position: relative;
+}
+
 .custom-indicators div.active {
   background-color: rgba(63, 0, 72, 1);
   height: auto;
@@ -121,4 +128,11 @@ section {
 .carousel-slide {
   background: center center/cover no-repeat;
   height: 700px;
+  position: relative;
+  &::after{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0,0,0,0.5);
+  }
 }

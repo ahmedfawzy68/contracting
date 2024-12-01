@@ -93,7 +93,7 @@ export class ContactUsFormComponent implements OnInit {
         }
       })
     }
-    else{
+    else {
       this.validators(contactForm);
     }
   }

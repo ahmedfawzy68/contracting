@@ -15,9 +15,9 @@
                 </div>
             </ng-container>
             <swiper-container dir="ltr" [pagination]="false" [navigation]="false" [loop]="true"
-                [breakpoints]="breakpoints">
+                [autoplay]="{delay: 1000}" [breakpoints]="breakpoints">
                 <swiper-slide *ngFor="let swiper of swipers">
-                    <img [src]="swiper.image" width="200" alt="swiper">
+                    <img [src]="swiper.image" width="170" height="170" alt="swiper">
                 </swiper-slide>
             </swiper-container>
         </div>

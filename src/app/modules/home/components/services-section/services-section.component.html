@@ -37,15 +37,15 @@
                 [responsiveOptions]="responsiveOptions" [numVisible]="4" [numScroll]="1" [showIndicators]="false"
                 [circular]="true">
                 <ng-template let-service pTemplate="item">
-                    <div class="p-3 content">
+                    <div class="p-3 content h-100 d-flex flex-column">
                         <div [ngStyle]="service.hoverStyle" (mouseenter)="onHover(service)"
-                            (mouseleave)="onLeave(service)" [dir]="'dir'|translate" class="services-box">
+                            (mouseleave)="onLeave(service)" [dir]="'dir'|translate" class="services-box flex-grow-1">
                             <div class="d-flex flex-column gap-5 mb-3">
                                 <img [src]="service.icon" width="100px" draggable="false" [alt]="service.title">
                                 <h5>{{service.title}}</h5>
                             </div>
                             <span routerLink="/contact-us">{{'navbar.contact-us'|translate}}<i
-                                    class="fa-solid fa-arrow-right-long me-1"></i></span>
+                                    class="fa-solid fa-arrow-right-long mx-1"></i></span>
                         </div>
                     </div>
                 </ng-template>

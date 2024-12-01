@@ -26,7 +26,7 @@ section {
         transform: translateY(-30px);
       }
       img {
-        transform: translateY(-150%);
+        transform: translateY(-250%);
       }
       span {
         transform: translateY(-30px);
@@ -44,7 +44,7 @@ section {
       position: relative;
       z-index: 2;
       font-size: 14px;
-      transform: translateY(350%);
+      transform: translateY(50vw);
       display: block;
       transition: all 300ms;
     }

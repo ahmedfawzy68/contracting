@@ -13,7 +13,7 @@ import { environment } from 'src/environments/environment.development';
 })
 export class NavbarComponent {
   lists = [
-    { name: "navbar.home", link: "home" },
+    { name: "navbar.home", link: "/" },
     { name: "navbar.about-us", link: "about-us" },
     { name: "navbar.portfolio", link: "portfolio" },
     { name: "navbar.services", link: "services" },

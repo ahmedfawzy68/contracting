@@ -3,7 +3,11 @@
     <p-carousel dir="ltr" [value]="goals_section" [numVisible]="1" [numScroll]="1" [circular]="true"
         [showNavigators]="false" [page]="activeIndex" (onPageChange)="onPageChange($event)" [showIndicators]="false">
         <ng-template let-slide pTemplate="item">
-            <div class="carousel-slide" [style.background-image]="'url(' + slide.background + ')'"></div>
+            <div class="carousel-slide d-flex justify-content-center align-items-center text-center" [style.background-image]="'url(' + slide.background + ')'">
+                <div class="container">
+                    <p class="d-lg-none d-block desc">{{ slide.description }}</p>
+                </div>
+            </div>
         </ng-template>
     </p-carousel>
     <div class="custom-indicators">

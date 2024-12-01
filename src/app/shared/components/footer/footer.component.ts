@@ -18,6 +18,7 @@ export class FooterComponent implements OnInit {
   ]
   settings!: Settings["data"];
   loading:boolean = true;
+  currentYear: number = new Date().getFullYear();
 
   constructor(private _settings: SettingsService, private _lang: LanguageService) { }
 

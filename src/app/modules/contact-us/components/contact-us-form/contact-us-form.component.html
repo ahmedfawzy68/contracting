@@ -11,34 +11,33 @@
                             class="mb-4" [isInput]="form.isInput" [isRequired]="form.requierd"
                             [label]="form.label|translate" [type]="form.type"
                             [formControlName]="form.formControlName"></app-custom-input>
-                        <app-custom-btn (click)="submit(contactForm)"
-                            [btnName]="'contact-us.send'|translate" [loading]="loading"></app-custom-btn>
+                        <app-custom-btn (click)="submit(contactForm)" [btnName]="'contact-us.send'|translate"
+                            [loading]="loading"></app-custom-btn>
                     </div>
                 </form>
             </div>
         </div>
         <div class="col-lg-4 mb-lg-0 mb-4">
-            <div class="h-100 info">
+            <div *ngIf="settings" class="h-100 info">
                 <h3 class="mb-4">{{'contact-us.main-branch'|translate}}</h3>
-                <p><i [class]="('dir'|translate)=='rtl'?'ms-2':'me-2'" class="fa-solid fa-location-dot"></i>
-                    السعودية - مكة</p>
-                <p><i [class]="('dir'|translate)=='rtl'?'ms-2':'me-2'" class="fa-solid fa-envelope-open-text"></i>
-                    qemmetalrawasi&#64;gmail.com</p>
+                <p><i [class]="('dir'|translate)=='rtl'?'ms-2':'me-2'"
+                        class="fa-solid fa-location-dot"></i>{{settings.main_branch.address}}</p>
+                <p><i [class]="('dir'|translate)=='rtl'?'ms-2':'me-2'"
+                        class="fa-solid fa-envelope-open-text"></i>{{settings.main_branch.email}}</p>
                 <p><i [class]="('dir'|translate)=='rtl'?'ms-2':'me-2'" class="fa-solid fa-phone-volume"></i>
-                    <span dir="ltr">+966999999999</span>
+                    <span dir="ltr">{{settings.main_branch.mobile}}</span>
                 </p>
-                <p><i [class]="('dir'|translate)=='rtl'?'ms-2':'me-2'" class="fa-solid fa-envelope-open-text"></i>
-                    www.qemmetalrawasi.co</p>
-                <h3 class="mt-5 mb-4">{{'contact-us.other-branches'|translate}}</h3>
-                <p><i [class]="('dir'|translate)=='rtl'?'ms-2':'me-2'" class="fa-solid fa-location-dot"></i>
-                    جدة والطائف والرياض والمدينة</p>
-                <p><i [class]="('dir'|translate)=='rtl'?'ms-2':'me-2'" class="fa-solid fa-envelope-open-text"></i>
-                    qemmetalrawasi&#64;gmail.com</p>
-                <p><i [class]="('dir'|translate)=='rtl'?'ms-2':'me-2'" class="fa-solid fa-phone-volume"></i>
-                    <span dir="ltr">+966999999999</span>
-                </p>
-                <p><i [class]="('dir'|translate)=='rtl'?'ms-2':'me-2'" class="fa-solid fa-envelope-open-text"></i>
-                    www.qemmetalrawasi.co</p>
+                <ng-container *ngIf="settings.second_branch.address">
+                    <h3 class="mt-5 mb-4">{{'contact-us.other-branches'|translate}}</h3>
+                    <p><i [class]="('dir'|translate)=='rtl'?'ms-2':'me-2'"
+                            class="fa-solid fa-location-dot"></i>{{settings.second_branch.address}}</p>
+                    <p *ngIf="settings.second_branch.email"><i [class]="('dir'|translate)=='rtl'?'ms-2':'me-2'"
+                            class="fa-solid fa-envelope-open-text"></i>{{settings.second_branch.email}}</p>
+                    <p *ngIf="settings.second_branch.mobile"><i [class]="('dir'|translate)=='rtl'?'ms-2':'me-2'"
+                            class="fa-solid fa-phone-volume"></i>
+                        <span dir="ltr">{{settings.second_branch.mobile}}</span>
+                    </p>
+                </ng-container>
 
                 <div *ngIf="settings?.careers_pdf || settings?.profile_pdf"
                     class="d-flex align-items-center gap-3 flex-wrap mt-5">
