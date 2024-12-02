@@ -4,9 +4,19 @@
     width: 100%;
     height: 350px;
     border-radius: 10px;
+    overflow: hidden;
     cursor: pointer;
+    &:hover {
+      .project-details{
+        bottom: 30px;
+      }
+      span{
+        transform: translateY(-40px);
+      }
+    }
     span {
       z-index: 3;
+      transition: all 300ms ease-in-out;
     }
     &::after {
       content: "";
@@ -15,7 +25,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, 0.3);
+      background: rgba(0, 0, 0, 0.5);
       z-index: 2;
       border-radius: inherit;
     }
@@ -25,13 +35,20 @@
       left: 0;
       width: 100%;
       height: 100%;
-      backface-visibility: hidden;
       border-radius: inherit;
-    }
-    .card-front {
       background: center center/cover no-repeat;
       color: #fff;
       font-size: 23px;
     }
   }
+}
+.project-details {
+  color: #fff;
+  transition: all 300ms ease-in-out;
+  z-index: 5;
+  position: absolute;
+  bottom: -50px;
+  left: 24px;
+  cursor: pointer;
+  font-size: 14px;
 }

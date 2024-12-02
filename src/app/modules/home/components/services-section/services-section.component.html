@@ -45,7 +45,8 @@
                                 <h5>{{service.title}}</h5>
                             </div>
                             <span routerLink="/contact-us">{{'navbar.contact-us'|translate}}<i
-                                    class="fa-solid fa-arrow-right-long mx-1"></i></span>
+                                    [class]="(('dir'|translate) == 'rtl')?'fa-arrow-left-long me-2':'fa-arrow-right-long ms-2'"
+                                    class="fa-solid"></i></span>
                         </div>
                     </div>
                 </ng-template>

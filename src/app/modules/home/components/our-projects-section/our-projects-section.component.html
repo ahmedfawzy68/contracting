@@ -24,11 +24,16 @@
         </div>
         <div class="row mt-5">
             <div *ngFor="let project of projects.items" class="col-lg-4 col-md-6 mb-4">
-                <div class="project-card-wrapper">
-                    <div routerLink="/portfolio" class="project-card d-flex justify-content-center align-items-center">
-                        <div class="card-front d-flex justify-content-center align-items-center"
+                <div routerLink="/portfolio" class="project-card-wrapper">
+                    <div class="project-card">
+                        <div [class]="('dir'|translate)=='rtl'?'justify-content-end':'justify-content-start'" class="card-front d-flex gap-3 align-items-end p-4"
                             [style.background-image]="'url(' + project.image_path + ')'">
                             <span>{{project.title}}</span>
+                        </div>
+                        <div routerLink="/portfolio" class="project-details">
+                            {{'home.project-details'|translate}}
+                            <i [class]="(('dir'|translate) == 'ltr')?'ms-2 fa-arrow-right-long':'me-2 fa-arrow-left-long'"
+                                class="fa-solid"></i>
                         </div>
                     </div>
                 </div>
